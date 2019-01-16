@@ -1,20 +1,6 @@
-
-CREATE TABLE `projetbdenat`.`Centres` ( `ID` INT(255) NOT NULL AUTO_INCREMENT PRIMARY KEY, `Ville` VARCHAR(255) NOT NULL);
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE TABLE `projetbdenat`.`Utilisateurs` ( `ID` INT(255) NOT NULL AUTO_INCREMENT , `Prenom` VARCHAR(255) NOT NULL ,
+CREATE TABLE `projetbdenat`.`Utilisateurs` ( `ID` INT(255) NOT NULL AUTO_INCREMENT  PRIMARY KEY  , `Prenom` VARCHAR(255) NOT NULL ,
  `Nom` VARCHAR(255) NOT NULL ,
  `Mail` VARCHAR(255) NOT NULL ,
  `Mdp` VARCHAR(255) NOT NULL ,
- `IDCentre` INT(255) NOT NULL REFERENCES centres(ID) ,
- `Role` VARCHAR(255) NOT NULL , PRIMARY KEY (`ID`)) ;
+ `Centre` VARCHAR(255) NOT NULL  ,
+ `Role` VARCHAR(255) NOT NULL ,) ;
