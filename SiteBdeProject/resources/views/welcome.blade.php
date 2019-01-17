@@ -3,6 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php
+         DB::table('article')->insert([
+            'nom' => str_random(10),
+            'Description' => str_random(10).'@gmail.com',
+            'Prix' => '40',
+            'Catégorie'=>'pelo',
+            'Image'=>str_random(15).'.png',
+                    ]);
+
+
+         DB::connection('BDDnat')->table('centre')->insert([
+            'Ville' => str_random(10),
+            'ImageBDE' => str_random(10).'@gmail.com',
+                    ]);
+
+        ?>
 
         <title>Laravel</title>
 
