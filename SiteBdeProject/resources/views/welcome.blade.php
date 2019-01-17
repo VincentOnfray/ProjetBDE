@@ -4,19 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php
-         DB::table('article')->insert([
-            'nom' => str_random(10),
-            'Description' => str_random(10).'@gmail.com',
-            'Prix' => '40',
-            'Catégorie'=>'pelo',
-            'Image'=>str_random(15).'.png',
-                    ]);
+        /*
+         $values = DB::table('article')->where('id','22')->first();
+         echo $values->Description;
 
 
          DB::connection('BDDnat')->table('centre')->insert([
             'Ville' => str_random(10),
             'ImageBDE' => str_random(10).'@gmail.com',
-                    ]);
+                    ]);*/
 
         ?>
 
