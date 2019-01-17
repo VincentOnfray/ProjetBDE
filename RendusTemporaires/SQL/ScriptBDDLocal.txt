@@ -4,7 +4,7 @@ CREATE TABLE `projetbdelocal`.`Proposition` ( `ID` INT(255) NOT NULL AUTO_INCREM
  						`Description` VARCHAR(255) NOT NULL ,
  						`Image` VARCHAR(255) NOT NULL ,
  						`Likes` INT(255) NOT NULL DEFAULT '0' ,
- 						`IDutilisateurs` INT(255) FOREIGN KEY REFERENCES idutilisateurs(ID),
+ 						`IDutilisateurs` INT(255) REFERENCES idutilisateurs(ID),
  						PRIMARY KEY (`ID`));
 
 CREATE TABLE `projetbdelocal`.`Evenement` ( `ID` INT(255) NOT NULL AUTO_INCREMENT ,PRIMARY KEY (`ID`),
@@ -36,5 +36,16 @@ CREATE TABLE `projetbdelocal`.`Commentaire` (
      									   `IDUtilisateurs` INT(255) REFERENCES idutilisateurs(idutilisateurs)
     										
 );
+
+
+CREATE TABLE `projetbdelocal`.`Articles` ( 
+    `ID` INT(255) NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+    `Nom` VARCHAR(255) NOT NULL,
+    `Description` VARCHAR(255) NOT NULL,
+    `Prix` INT(255) not null,
+    `Catégorie` VARCHAR(255),
+    `image` VARCHAR(255)
+    
+                                         );
             
             
