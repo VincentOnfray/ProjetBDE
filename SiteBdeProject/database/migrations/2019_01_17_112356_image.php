@@ -20,8 +20,7 @@ class Image extends Migration
             $table->integer('IDEvenement');
             $table->integer('IDCreateur');
             $table->foreign('IDEvenement')->references('id')->on('Evenement');
-            $table->timestamps();
-        });
+                    });
     }
 
     /**

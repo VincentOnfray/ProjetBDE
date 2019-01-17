@@ -20,7 +20,7 @@ class Evenement extends Migration
             $table->boolean('Recurrence');
             $table->integer('prix')->default('0');
             $table->integer('IDCreateur');
-            $table->timestamps();
+            
         });
     }
 

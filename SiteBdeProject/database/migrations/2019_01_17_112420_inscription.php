@@ -17,7 +17,7 @@ class Inscription extends Migration
             $table->integer('IDInscrit');
             $table->integer('IDEvenement');
             $table->foreign('IDEvenement')->references('id')->on('Evenement');
-            $table->timestamps();
+            
         });
     }
 

@@ -19,8 +19,8 @@ class Article extends Migration
             $table->string('Description');
             $table->integer('Prix')->default('0');
             $table->String('Catégorie');
-            $table->integer('Image');
-            $table->timestamps();
+            $table->String('Image');
+            
         });
     }
 

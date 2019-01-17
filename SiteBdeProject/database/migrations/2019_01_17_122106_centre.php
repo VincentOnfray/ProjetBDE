@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Proposition extends Migration
+class Centre extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class Proposition extends Migration
      */
     public function up()
     {
-          Schema::create('Proposition', function (Blueprint $table) {
+         Schema::connection('BDDnat')->create('Centre', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Description');
-            $table->integer('likes')->default('0');
-            $table->integer('IDutilisateur');
-            
+            $table->string('Ville');
+            $table->string('ImageBDE');         
         });
     }
 
@@ -29,6 +27,6 @@ class Proposition extends Migration
      */
     public function down()
     {
-        Schema::drop('Proposition');
+        Schema::connection('BDDnat')->drop('Centre');
     }
 }

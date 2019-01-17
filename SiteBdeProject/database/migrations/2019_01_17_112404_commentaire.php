@@ -19,8 +19,7 @@ class Commentaire extends Migration
             $table->integer('IDImage');
             $table->integer('IDCreateur');
             $table->foreign('IDImage')->references('id')->on('Image');
-            $table->timestamps();
-        });
+            });
     }
 
     /**
