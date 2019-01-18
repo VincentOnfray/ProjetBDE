@@ -20,7 +20,7 @@
 			</nav> 
             <div  class="navigation">
             <ul>
-                <li><img src="img/cesi-logo.png"></li>
+                <li id="img"><img src="img/cesi-logo.png"></li>
                 <li><a href="/">CESI Centre de Lyon</a></li>
                 <li><a href="/Shop"> Boutique</a></li>
                 <li><a href="/Event"> Evènement </a></li>
