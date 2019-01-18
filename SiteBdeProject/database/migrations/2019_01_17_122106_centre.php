@@ -13,7 +13,7 @@ class Centre extends Migration
      */
     public function up()
     {
-         Schema::connection('BDDnat')->create('Centre', function (Blueprint $table) {
+         Schema::connection('BDDnat')->create('centre', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Ville');
             $table->string('ImageBDE');         
@@ -27,6 +27,6 @@ class Centre extends Migration
      */
     public function down()
     {
-        Schema::connection('BDDnat')->drop('Centre');
+        Schema::connection('BDDnat')->drop('centre');
     }
 }

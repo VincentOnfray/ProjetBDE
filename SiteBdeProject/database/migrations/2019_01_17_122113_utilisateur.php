@@ -13,7 +13,7 @@ class Utilisateur extends Migration
      */
     public function up()
     {
-         Schema::connection('BDDnat')->create('Utilisateur', function (Blueprint $table) {
+         Schema::connection('BDDnat')->create('utilisateur', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Prenom');
             $table->string('Nom'); 
@@ -32,6 +32,6 @@ class Utilisateur extends Migration
      */
     public function down()
     {
-        Schema::connection('BDDnat')->drop('Utilisateur');
+        Schema::connection('BDDnat')->drop('utilisateur');
     }
 }

@@ -1,0 +1,152 @@
+Dictionnaire de données 
+
+Nom : mail
+Code : MAIL
+Type : VARCHAR,
+
+ 
+
+Nom : ID
+Code : ID
+Type : AUTO_INCREMENT,
+
+Nom : Pseudonyme
+Code : PSEUDONYME
+Type : VARCHAR,
+
+ 
+
+Nom : motdepasse
+Code : MOTDEPASSE
+Type : VARCHAR,
+
+ 
+
+Nom : Centre
+Code : CENTRE
+Type : VARCHAR,
+
+ 
+
+Nom : Role
+Code : ROLE
+Type : VARCHAR,
+
+ 
+
+Nom : Nom
+Code : PSEUDONYME
+Type : VARCHAR,
+
+ 
+
+Nom : Prenom
+Code : PRENOM
+Type : VARCHAR,
+
+ 
+
+Nom : IDcreateur
+Code : IDCREATEUR
+Type : INT,
+
+ 
+
+Nom : Lieu
+Code : LIEU
+Type : VARCHAR,
+
+ 
+
+Nom : Description
+Code : DESCRIPTION
+Type : VARCHAR,
+
+Nom : Image
+Code : IMAGE
+Type : VARCHAR,
+
+ 
+
+Nom : IDcréateur
+Code : IDCRÉATEUR
+Type : VARCHAR,
+
+ 
+
+Nom : Date
+Code : DATE
+Type : DATETIME,
+
+ 
+
+Nom : Recurrente
+Code : RECURRENTE
+Type : BOOL,
+
+Nom : Prix
+Code : PRIX
+Type : INT,
+
+ 
+
+Nom : IDevenement
+Code : IDEVENEMENT
+Type : INT,
+
+ 
+
+Nom : IDimage
+Code : IDIMAGE
+Type : INT,
+
+ 
+
+Nom : Contenu
+Code : CONTENU
+Type : VARCHAR5
+,
+ 
+
+Nom : Likes
+Code : LIKES
+Type : INT5
+,
+ 
+
+Nom : Quantité
+Code : QUANTITÉ
+Type : INT, 
+
+Nom : Catégorie
+Code : CATÉGORIE
+Type : VARCHAR5
+,
+ 
+
+Nom : ID
+Code : ID
+Type : INT,
+
+Nom : IDutilisateur
+Code : IDUTILISATEUR
+Type : INT,
+
+Nom : Ville
+Code : VILLE
+Type : VARCHAR,
+
+ 
+
+Nom : IDcentre
+Code : IDCENTRE
+Type : INT,
+
+ 
+
+Nom : ImageBDE
+Code : IMAGEBDE
+Type : VARCHAR,
+
+ 
+

@@ -4,16 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php
-        /*
-         $values = DB::table('article')->where('id','22')->first();
-         echo $values->Description;
-
+   
+     
 
          DB::connection('BDDnat')->table('centre')->insert([
             'Ville' => str_random(10),
             'ImageBDE' => str_random(10).'@gmail.com',
-                    ]);*/
-
+                    ]);
         ?>
 
         <title>Laravel</title>
