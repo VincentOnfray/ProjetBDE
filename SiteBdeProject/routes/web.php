@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('Subscription', function () {
+    return view('inscription');
+});
