@@ -4,5 +4,4 @@
 
 
 @section('content')
-AHHH GAYYY
 @endsection

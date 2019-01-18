@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('inscr', function () {
+    return view('inscription');
+});
