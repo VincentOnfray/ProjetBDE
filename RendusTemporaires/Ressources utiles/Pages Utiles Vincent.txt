@@ -12,4 +12,5 @@ https://coderwall.com/p/o73fbq/creating-foreign-key-in-laravel-migrations
 Pour plusieurs BDD sur laravel:
 https://fideloper.com/laravel-multiple-database-connections
 
-
+Sessions:
+https://laravel.com/docs/5.7/session
