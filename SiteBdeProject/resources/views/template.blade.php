@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
 	@yield ('css')
 	<title>BDE Cesi Lyon </title>
 </head>
@@ -14,6 +15,7 @@
         			<ul>
             			<li><a href="/Login"> Connexion </a></li>
             			<li><a href="/register"> Inscription </a></li>
+                        <li><a href="/contact"><i class="fa fa-phone"></i> Contact</a></li>
         			</ul>
     			</div>    
 			</nav>
@@ -21,9 +23,9 @@
                 <ul>
                     <li id="img"><img src="img/cesi-logo.png"></li>
                     <li><a href="/">CESI Centre de Lyon</a></li>
-                    <li><a href="/Shop"> Boutique</a></li>
-                    <li><a href="/Event"> Evènement </a></li>
-                    <li><a href="/Ideas"> Boite à Idées </a></li>
+                    <li><a href="/Shop"><i class="fas fa-shopping-cart"></i> Boutique</a></li>
+                    <li><a href="/Event"><i class="far fa-calendar-alt"></i> Evènement </a></li>
+                    <li><a href="/Ideas"><i class="far fa-lightbulb"></i> Boite à Idées </a></li>
                 </ul>
             </div>
 	</header>
