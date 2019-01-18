@@ -29,10 +29,7 @@
 		<input type="password" class="form_control" id="password" name="password" value=''>
 	</div>
 
-	<div class="form group">
-		<label for="checkPW">Verification Mot de Passe:</label>
-		<input type="password" class="form_control" id="checkPW" name="checkPW">
-	</div>
+
 	<div class="form group">
 		<label for="role">Role:</label>
 		<input type="text" class="form_control" id="role" name="role">
