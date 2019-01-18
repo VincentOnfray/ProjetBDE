@@ -23,11 +23,13 @@ header{
 	position: sticky;
 	top: 0;
 }
-
+header a:hover{
+	color: #FFC252;
+}
 
 .element_menu ul {
     list-style-type: none;
-    font-family: 'Roboto', Arial, serif;
+    font-family: 'Roboto', Arial, sans-serif;
 	font-weight: bold;
     overflow: hidden;
     margin: 0;
@@ -50,7 +52,7 @@ header{
 
 
 .navigation{
-	font-family: 'Roboto', Arial, serif;
+	font-family: 'Roboto', Arial, sans-serif;
 	margin-top: 0;
 	height: auto;
 	min-width: 12%;
@@ -62,7 +64,7 @@ header{
 	margin:0;
 	list-style-type: none;
 	overflow: hidden;
-    background-color: #000000;
+	background-color: #000000;
 }
 .navigation li {
 	border-bottom: 1px solid grey;
@@ -110,4 +112,29 @@ main{
 }
 .fas{
 	color: #FFC252;
+}
+
+
+footer{
+	font-family: 'Roboto', Arial, sans-serif;
+	color: white;
+}
+.social{
+	text-align: center;
+}
+.social ul{
+	list-style-type: none;
+    padding: 0;
+}
+.social li{
+	display: inline;
+}
+.social i{
+	font-size: 150%;
+}
+.social a{
+	text-decoration: none;
+	text-align: center;
+    padding: 0.3em 0.3em;
+	color: white;
 }
