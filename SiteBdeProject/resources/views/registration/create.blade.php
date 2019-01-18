@@ -6,6 +6,7 @@
 @section('content')
 <h1> Register Below</h1>
 <form method="POST" action="/register">
+	
 	{{csrf_field()}}
 
 	<div class="form group">
@@ -25,7 +26,7 @@
 
 	<div class="form group">
 		<label for="password">Mot de Passe:</label>
-		<input type="text" class="form_control" id="password" name="password">
+		<input type="password" class="form_control" id="password" name="password" value=''>
 	</div>
 
 	<div class="form group">
@@ -42,15 +43,12 @@
 	</div>
 
 	<div class="form group">
-		 <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
         </div>
         
 	</div>
 
-	<?php
-	$role = 'bde';
-	$idCentre = '1';
-	?>
+	
 
 
 @endsection

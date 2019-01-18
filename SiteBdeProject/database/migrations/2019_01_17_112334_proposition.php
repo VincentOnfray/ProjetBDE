@@ -18,6 +18,8 @@ class Proposition extends Migration
             $table->string('Description');
             $table->integer('likes')->default('0');
             $table->integer('IDutilisateur');
+            $table->integer('IDImage');
+            $table->foreign('IDImage')->references('id')->on('Image');
             
         });
     }

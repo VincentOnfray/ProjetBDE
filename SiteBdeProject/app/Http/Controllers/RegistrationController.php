@@ -18,12 +18,21 @@ class RegistrationController extends Controller
 			'name'=>'required',
 			'surname'=>'required',
 			'mail'=>'required|email',
-			'password'=>'min:6',
+			'password'=>'min:6|confirmed',
 			'role'=>'required',
 			'center'=>'required'
 		]); 
 
-		DB::connection('BDDnat')->table('utilisateur')->insert(['Prenom'=>request()->input('name'),'Nom'=>request()->input('surname'),'Mail'=>request()->input('mail'),'MDP'=>request()->input('password'),'Role'=>request()->input('role'),'IDcentre'=>request()->input('center')]);
+		DB::connection('BDDnat')->table('utilisateur')->insert([
+			'Prenom'=>request()->input('name'),
+			'Nom'=>request()->input('surname'),
+			'Mail'=>request()->input('mail'),
+			'MDP'=>bcrypt(request()->input('password')),
+			'Role'=>request()->input('role'),
+			'IDcentre'=>request()->input('center')
+		]);
+
+		return redirect()->to('/test');
 
 	}
 

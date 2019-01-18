@@ -17,7 +17,7 @@ class Image extends Migration
             $table->increments('id');
             $table->string('image');
             $table->integer('likes')->default('0');
-            $table->integer('IDEvenement');
+            $table->integer('IDEvenement')->nullable();
             $table->integer('IDCreateur');
             $table->foreign('IDEvenement')->references('id')->on('Evenement');
                     });
