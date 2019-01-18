@@ -14,7 +14,7 @@
     			<div class="element_menu">
         			<ul>
             			<li><a href="/Login"> Connexion </a></li>
-            			<li><a href="/Subscription"> Inscription </a></li>
+            			<li><a href="Subscription"> Inscription </a></li>
         			</ul>
     			</div>    
 			</nav> 

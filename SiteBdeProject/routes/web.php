@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('inscr', function () {
+Route::get('Subscription', function () {
     return view('inscription');
 });
