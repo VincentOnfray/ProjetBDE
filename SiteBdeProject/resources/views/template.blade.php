@@ -26,6 +26,7 @@
                     <li><a href="/Shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
                     <li><a href="/Event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
                     <li><a href="/Ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
+                    <li></li>
                 </ul>
             </div>
 	</header>
@@ -33,7 +34,16 @@
             @yield ('content')
     </main>
     <footer>
-        
+        <div class="social">
+            <p>Suivez nous sur les réseaux sociaux:</p>
+            <ul>
+                <li><a href="/"><i class="fab fa-twitter"></i></li>
+                <li><a href="/"><i class="fab fa-facebook-f"></i></li>
+                <li><a href="/"><i class="fab fa-youtube"></i></li>
+                <li><a href="/"><i class="fab fa-instagram"></i></li> 
+            </ul>
+        </div>
+
     </footer>
 </body>
 </html>
