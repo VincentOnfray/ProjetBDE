@@ -8,34 +8,30 @@
 </head>
 <body>
 	<header>
-		<div>
  			<!--Menu de Navigation-->
         	<nav>        
     			<div class="element_menu">
         			<ul>
             			<li><a href="/Login"> Connexion </a></li>
-            			<li><a href="Subscription"> Inscription </a></li>
+            			<li><a href="/register"> Inscription </a></li>
         			</ul>
     			</div>    
-			</nav> 
+			</nav>
             <div  class="navigation">
-            <ul>
-                <li id="img"><img src="img/cesi-logo.png"></li>
-                <li><a href="/">CESI Centre de Lyon</a></li>
-                <li><a href="/Shop"> Boutique</a></li>
-                <li><a href="/Event"> Evènement </a></li>
-                <li><a href="/Ideas"> Boite à Idées </a></li>
-            </ul>
-        </div>
-
-    	</div>
+                <ul>
+                    <li id="img"><img src="img/cesi-logo.png"></li>
+                    <li><a href="/">CESI Centre de Lyon</a></li>
+                    <li><a href="/Shop"> Boutique</a></li>
+                    <li><a href="/Event"> Evènement </a></li>
+                    <li><a href="/Ideas"> Boite à Idées </a></li>
+                </ul>
+            </div>
 	</header>
     <main>
-        <section>
             @yield ('content')
-        </section>
-        
     </main>
-   
+    <footer>
+        
+    </footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 html{
     height: 100%;
+    width: 100%;
 }
 
 body{
@@ -59,7 +60,6 @@ header{
 #img{
 	background-color: white;
 	padding: 15px;
-	i
 }
 
 .navigation a {
@@ -73,7 +73,7 @@ header{
 main{
 	
 	height: 100%;
-	border-left: 14.3em;
+	border-left: 14.4em;
 	border-left-style: solid;
 	border-left-color: #000000;
 	background-color: #FFFFFF;
