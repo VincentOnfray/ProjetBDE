@@ -13,6 +13,14 @@ class SessionsController extends Controller
     
     public function store()
     {
+
+
+    		$this->validate(request(),[
+			'email'=>'required|email',
+			'password'=>'min:6',
+		]); 
+
+
         if (auth()->attempt(request(['email', 'password'])) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
