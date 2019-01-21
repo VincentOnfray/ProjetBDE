@@ -13,7 +13,7 @@ class Article extends Migration
      */
     public function up()
     {
-         Schema::create('Article', function (Blueprint $table) {
+         Schema::connection('BDDlocal')->create('Article', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom');
             $table->string('Description');
@@ -31,6 +31,6 @@ class Article extends Migration
      */
     public function down()
     {
-        Schema::drop('Article');
+        Schema::connection('BDDlocal')->drop('Article');
     }
 }

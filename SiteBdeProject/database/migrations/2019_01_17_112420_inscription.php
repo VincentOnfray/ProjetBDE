@@ -13,7 +13,7 @@ class Inscription extends Migration
      */
     public function up()
     {
-         Schema::create('Inscription', function (Blueprint $table) {
+         Schema::connection('BDDlocal')->create('Inscription', function (Blueprint $table) {
             $table->integer('IDInscrit');
             $table->integer('IDEvenement');
             $table->foreign('IDEvenement')->references('id')->on('Evenement');
@@ -28,6 +28,6 @@ class Inscription extends Migration
      */
     public function down()
     {
-        Schema::drop('Inscription');
+        Schema::connection('BDDlocal')->drop('Inscription');
     }
 }

@@ -4,40 +4,41 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
-use App\utilisateur;
+use App\User;
 
 class RegistrationController extends Controller
 {
     
 	Public function create()
 	{
+
 		return view('registration.create');
+
+
 	}
 
 	public function store(){
+
+		//verifie que le contenu des champs est valide
 		$this->validate(request(),[
 			'name'=>'required',
 			'surname'=>'required',
-			'mail'=>'required|email',
+			'email'=>'required|email',
 			'password'=>'min:6',
 			'role'=>'required',
-			'center'=>'required'
+			'centre'=>'required'
 		]); 
-
-		/*DB::connection('BDDnat')->table('utilisateur')->insert([
-			'Prenom'=>request()->input('name'),
-			'Nom'=>request()->input('surname'),
-			'Mail'=>request()->input('mail'),
-			'MDP'=>bcrypt(request()->input('password')),
-			'Role'=>request()->input('role'),
-			'IDcentre'=>request()->input('center')
-		]);*/
-  $user = utilisateur::create(request(['name','surname', 'mail', 'password','role','center']));
+		
+		//écrit dans la table "utilisateurs"
+		
         
-        //auth()->login($user);
+        
 
-
-		return redirect()->to('/test');
+ 	$user = User::create(request(['name','surname', 'email', 'password','role','centre']));
+        
+        auth()->login($user);
+        
+        return redirect()->to('/');
 
 
 

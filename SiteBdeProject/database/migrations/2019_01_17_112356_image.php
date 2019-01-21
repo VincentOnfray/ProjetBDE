@@ -13,7 +13,7 @@ class Image extends Migration
      */
     public function up()
     {
-          Schema::create('Image', function (Blueprint $table) {
+          Schema::connection('BDDlocal')->create('Image', function (Blueprint $table) {
             $table->increments('id');
             $table->string('image');
             $table->integer('likes')->default('0');
@@ -30,6 +30,6 @@ class Image extends Migration
      */
     public function down()
     {
-        Schema::drop('Image');
+        Schema::connection('BDDlocal')->drop('Image');
     }
 }

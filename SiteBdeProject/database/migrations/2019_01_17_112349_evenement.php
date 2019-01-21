@@ -13,7 +13,7 @@ class Evenement extends Migration
      */
     public function up()
     {
-         Schema::create('Evenement', function (Blueprint $table) {
+         Schema::connection('BDDlocal')->create('Evenement', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Description');
             $table->date('Date');
@@ -33,6 +33,6 @@ class Evenement extends Migration
      */
     public function down()
     {
-        Schema::drop('Evenement');
+        Schema::connection('BDDlocal')->drop('Evenement');
     }
 }

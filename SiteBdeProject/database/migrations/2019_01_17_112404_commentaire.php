@@ -13,7 +13,7 @@ class Commentaire extends Migration
      */
     public function up()
     {
-        Schema::create('Commentaire', function (Blueprint $table) {
+        Schema::connection('BDDlocal')->create('Commentaire', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Contenu');
             $table->integer('IDImage');
@@ -29,6 +29,6 @@ class Commentaire extends Migration
      */
     public function down()
     {
-        Schema::drop('Commentaire');
+        Schema::connection('BDDlocal')->drop('Commentaire');
     }
 }

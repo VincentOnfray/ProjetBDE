@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Utilisateurs extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,18 @@ class Utilisateurs extends Migration
      */
     public function up()
     {
-         Schema::connection('BDDnat')->create('utilisateurs', function (Blueprint $table) {
+        Schema::connection('BDDnat')->create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('surname'); 
-            $table->string('mail');
+            $table->string('surname');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role');
             $table->integer('centre')->default('1');
             $table->foreign('centre')->references('id')->on('Centre');
-            $table->timestamps();       
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -33,6 +35,6 @@ class Utilisateurs extends Migration
      */
     public function down()
     {
-        Schema::connection('BDDnat')->drop('utilisateurs');
+        Schema::connection('BDDnat')->dropIfExists('users');
     }
 }

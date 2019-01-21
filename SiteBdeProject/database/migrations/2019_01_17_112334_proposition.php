@@ -13,7 +13,7 @@ class Proposition extends Migration
      */
     public function up()
     {
-          Schema::create('Proposition', function (Blueprint $table) {
+          Schema::connection('BDDlocal')->create('Proposition', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Description');
             $table->integer('likes')->default('0');
@@ -31,6 +31,6 @@ class Proposition extends Migration
      */
     public function down()
     {
-        Schema::drop('Proposition');
+        Schema::connection('BDDlocal')->drop('Proposition');
     }
 }

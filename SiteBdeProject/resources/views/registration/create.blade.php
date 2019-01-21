@@ -1,9 +1,10 @@
 @extends("template")
 
 
-
+<!-- page d'enregistrement d'utilisateur, le choix de rôle est provisoire, la gestion n'etant pas explicitement demandée dans le sujet, sa priorité est plus faible que d'autres fonctionnalité-->
 
 @section('content')
+
 <h1> Register Below</h1>
 <form method="POST" action="/register">
 	
@@ -20,8 +21,8 @@
 	</div>
 
 	<div class="form group">
-		<label for="mail">Adresse E-Mail:</label>
-		<input type="email" class="form_control" id="mail" name="mail">
+		<label for="email">Adresse E-Mail:</label>
+		<input type="email" class="form_control" id="email" name="email">
 	</div>
 
 	<div class="form group">
@@ -31,12 +32,44 @@
 
 
 	<div class="form group">
+
 		<label for="role">Role:</label>
-		<input type="text" class="form_control" id="role" name="role">
+
+		<select name="role">
+
+    		<option value="Etudiant" selected="selected">Etudiant</option>
+
+    		<option value="CESI">Observateur CESI</option>
+
+    		<option value="BDE">Membre BDE</option>
+
+		</select>
+
 	</div>
+
+
+
+
 	<div class="form group">
-		<label for="center">ID centre:</label>
-		<input type="text" class="form_control" id="center" name="center">
+
+		<label for="centre">Centre:</label>
+
+		<select name="centre">
+
+    		<?php
+		$centres= DB::connection('BDDnat')->select('select * from centre');
+			 foreach ($centres as $centre) 	
+     {
+    ?>
+      <option value="<?php echo $centre->id; ?>"><?php echo $centre->Ville; ?></option>
+    <?php
+     }
+    ?>
+			
+		}
+	?>
+		</select>
+
 	</div>
 
 	<div class="form group">
