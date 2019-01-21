@@ -14,8 +14,12 @@
         	<nav>        
     			<div class="element_menu">
         			<ul>
+                         @if( auth()->check() )
+                                <li><p id="user"> Bonjour, <?php echo auth()->user()->name ?> </p></li>
+                        @else
             			<li><a href="/Login"> Connexion </a></li>
             			<li><a href="/register"> Inscription </a></li>
+                         @endif
                         <li><a href="/contact"><i class="fa fa-phone"></i> Contact</a></li>
         			</ul>
     			</div>    

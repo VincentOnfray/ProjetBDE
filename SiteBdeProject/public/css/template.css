@@ -26,6 +26,9 @@ header a:hover{
 	color: #FFC252;
 }
 
+#user{
+	color: white;
+}
 .element_menu ul {
     list-style-type: none;
     font-family: 'Roboto', Arial, sans-serif;
