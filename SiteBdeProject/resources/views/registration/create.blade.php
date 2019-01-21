@@ -5,7 +5,7 @@
 
 @section('content')
 
-<h1> Register Below</h1>
+<h1> Rejoins Nous!</h1>
 <form method="POST" action="/register">
 	
 	{{csrf_field()}}
@@ -27,7 +27,7 @@
 
 	<div class="form group">
 		<label for="password">Mot de Passe:</label>
-		<input type="password" class="form_control" id="password" name="password" value=''>
+		<input type="password" class="form_control" id="password" name="password">
 	</div>
 
 
