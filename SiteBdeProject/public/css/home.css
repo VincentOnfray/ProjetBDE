@@ -1,0 +1,38 @@
+#head img{
+	width: 30%;
+	height: auto;
+}
+
+#head ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 0;
+	padding: 0;
+
+}
+#head li{
+	text-align: center;
+	width: 100%;
+}
+#title{
+	margin:auto;
+}
+h1{
+	margin:0;
+	font-size: 150%;
+}
+#contenu div{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#contenu p{
+	font-size: 130%;
+}
+#contenu li{
+	font-size: 130%;
+}
+#contenu h2{
+	text-align: center;
+}

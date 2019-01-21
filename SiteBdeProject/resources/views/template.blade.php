@@ -17,7 +17,7 @@
 
                          @if( auth()->check() )
                             <li><a href="/logout"> Déconnexion </a></li>
-                            <li><p id="user"> Bonjour, <?php echo auth()->user()->name ?> </p></li>
+                            <li id="user"><p> Bonjour, <?php echo auth()->user()->name ?> </p></li>
                         @else
             			    <li><a href="/login"> Connexion </a></li>
             			    <li><a href="/register"> Inscription </a></li>
