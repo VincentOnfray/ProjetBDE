@@ -14,14 +14,14 @@
         	<nav>        
     			<div class="element_menu">
         			<ul>
+
                          @if( auth()->check() )
-                                <li><p id="user"> Bonjour, <?php echo auth()->user()->name ?> </p></li>
-                                <li><a href="/Logout"> Déconnexion </a></li>
+                            <li><a href="/logout"> Déconnexion </a></li>
+                            <li><p id="user"> Bonjour, <?php echo auth()->user()->name ?> </p></li>
                         @else
-            			<li><a href="/Login"> Connexion </a></li>
-            			<li><a href="/register"> Inscription </a></li>
+            			    <li><a href="/login"> Connexion </a></li>
+            			    <li><a href="/register"> Inscription </a></li>
                          @endif
-                        <li><a href="/contact"><i class="fa fa-phone"></i> Contact</a></li>
         			</ul>
     			</div>    
 			</nav>
@@ -29,9 +29,10 @@
                 <ul>
                     <li id="img"><img src="img/cesi-logo.png"></li>
                     <li><a href="/">CESI Centre de Lyon</a></li>
-                    <li><a href="/Shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
-                    <li><a href="/Event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
-                    <li><a href="/Ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
+                    <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
+                    <li><a href="/event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
+                    <li><a href="/ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
+                    <li><a href="/contact"><i class="fa fa-phone"></i> NOUS CONTACTER</a></li>
                     <li></li>
                 </ul>
             </div>
