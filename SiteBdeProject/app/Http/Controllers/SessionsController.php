@@ -17,8 +17,10 @@ class SessionsController extends Controller
 
     		$this->validate(request(),[
 			'email'=>'required|email',
-			'password'=>'min:6',
+			'password'=>'required|min:6',
 		]); 
+
+    		
 
 
         if (auth()->attempt(request(['email', 'password'])) == false) {
@@ -36,4 +38,19 @@ class SessionsController extends Controller
         
         return redirect()->to('/');
     }
+
+
+
+
+
+
+    	public function messages()
+		{
+		    return [
+		        'email.email' => 'Email invalide',
+		        'password.required'  => 'Mot de passe necessaire',
+		        
+		    ];
+		}
+
 }

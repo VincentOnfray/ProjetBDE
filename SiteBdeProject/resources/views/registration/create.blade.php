@@ -58,10 +58,11 @@
 
     		<?php
 		$centres= DB::connection('BDDnat')->select('select * from centre');
+
 			 foreach ($centres as $centre) 	
      {
     ?>
-      <option value="<?php echo $centre->id; ?>"><?php echo $centre->Ville; ?></option>
+      <option value= <?php echo $centre->id; ?> ><?php echo $centre->Ville; ?></option>
     <?php
      }
     ?>
@@ -78,6 +79,8 @@
         
 	</div>
 
+	
+ 
 	
 
 
