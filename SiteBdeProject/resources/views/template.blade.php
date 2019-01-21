@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/template.css" />
 	@yield ('css')
-	<title>BDE Cesi Lyon </title>
+	
+    <title>BDE Cesi Lyon </title>
 </head>
 <body>
 	<header>
@@ -30,20 +31,30 @@
                 </ul>
             </div>
 	</header>
+
+
     <main>
             @yield ('content')
     </main>
+
+
     <footer>
         <div class="social">
             <p>Suivez nous sur les réseaux sociaux:</p>
             <ul>
-                <li><a href="/"><i class="fab fa-twitter"></i></li>
-                <li><a href="/"><i class="fab fa-facebook-f"></i></li>
-                <li><a href="/"><i class="fab fa-youtube"></i></li>
-                <li><a href="/"><i class="fab fa-instagram"></i></li> 
+                <li><a href="/"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="/"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="/"><i class="fab fa-instagram"></i></a></li> 
             </ul>
         </div>
-
+        <div class="infos">
+            <ul>
+                <li><a href="/">Conditions générales de ventes</a></li>
+                <li><a href="/">Politique de Protection de Données Personnelles</a></li>
+                <li><a href="/">Mentions Légales</a></li>
+            </ul>       
+        </div>
     </footer>
 </body>
 </html>

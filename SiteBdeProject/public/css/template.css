@@ -95,7 +95,7 @@ main{
 	background-color: #FFFFFF;
 }
 
-.fa-phone {
+.fa-phone{
 	color: #FFC252;
 	size: 3em;
 	-moz-transform: scaleX(-1);
@@ -125,6 +125,7 @@ footer{
 .social ul{
 	list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 .social li{
 	display: inline;
@@ -137,4 +138,35 @@ footer{
 	text-align: center;
     padding: 0.3em 0.3em;
 	color: white;
+}
+
+
+.infos{
+	text-align: center;
+	margin-top: 2%;
+}
+.infos ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+}
+.infos li{
+	display: inline;
+	border:2px solid white;
+	border-radius: 3%; 
+	padding:1.5em;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	color:white;
+}
+
+.infos a{
+	text-align: center;
+    padding: 0.3em 0.3em;
+	color: inherit;
+}
+.infos li:hover{
+	background-color: white; 
+	color: black;
 }
