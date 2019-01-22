@@ -13,9 +13,9 @@
                 Ensuite on echo un string qui formera la balise d'image bien propre.
                 */
                     $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')');                                   
-                    echo  ("<li><img src=/img/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
+                    echo  ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
                     echo  ("<li id='title'><h1>BDE Cesi Lyon <br> Bienvenue sur le site de Votre BDE</h1></li>");
-                    echo  ("<li><img src=/img/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
+                    echo  ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
                 ?>
             @endif
 		</ul>	
