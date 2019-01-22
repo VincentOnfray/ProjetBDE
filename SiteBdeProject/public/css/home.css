@@ -15,6 +15,7 @@
 #head li{
 	text-align: center;
 	width: 100%;
+	padding:1em;
 }
 #title{
 	margin:auto;
@@ -26,8 +27,12 @@ h1{
 #contenu div{
 	border:2px solid #5b88d9;
 	border-radius: 15px;
+	margin-top: 2%;
 	margin-left: 10%;
 	margin-right: 10%;
+	padding: 1%;
+	background-color: #5b88d9;
+
 }
 #contenu p{
 	font-size: 130%;
