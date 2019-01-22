@@ -1,0 +1,1 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getCentre`(IN `IDcentre` INT) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER SELECT * FROM centre where( centre.id = IDcentre); 

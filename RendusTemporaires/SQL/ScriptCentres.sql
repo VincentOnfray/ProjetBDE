@@ -1,1 +1,5 @@
-INSERT INTO `centre` (`Ville`, `ImageBDE`) VALUES ( 'Lyon', 'Lyon_BDE.png'),('Bordeaux','Bordeaux_BDE.png'),('La rochelle','Larochelle_BDE'),('Rouen','Rouen_BDE.png'),('Toulouse','Toulouse_BDE.png');
+INSERT INTO `centre` (`Ville`, `ImageBDE`) VALUES ( 'Lyon', 'LyonBDE.png'),
+('Bordeaux','BordeauxBDE.png'),
+('La rochelle','LarochelleBDE'),
+('Rouen','RouenBDE.png'),
+('Toulouse','ToulouseBDE.png');
