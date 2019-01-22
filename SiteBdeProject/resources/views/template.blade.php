@@ -45,7 +45,7 @@
                     @if(auth()->check())
                     <li><a href="/">CESI Centre de Lyon</a></li>
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
-                    <li><a href="/event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
+                    <li><a href="/display_event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
                     <li><a href="/ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
                     @endif
                      <li><a href="/contact"><i class="fa fa-phone"></i> NOUS CONTACTER</a></li>

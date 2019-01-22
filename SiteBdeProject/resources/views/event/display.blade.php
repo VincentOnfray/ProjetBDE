@@ -8,6 +8,5 @@
 
 
 @section('content')
-
-<p><a href="/event"></a>hello</p>
+	<a href="create_event">organiser</a>
 @endsection
