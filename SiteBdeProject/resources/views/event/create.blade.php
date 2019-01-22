@@ -1,48 +1,63 @@
 @extends("template")
 
 
-<!-- page d'enregistrement d'utilisateur, le choix de rôle est provisoire, la gestion n'etant pas explicitement demandée dans le sujet, sa priorité est plus faible que d'autres fonctionnalité-->
+<!-- page d'enregistrement d'evenement -->
 
 @section('content')
 
 <h1> Organise un max!</h1>
-<form method="POST" action="/register">
+<form method="POST" action="/create_event">
 	
 	{{csrf_field()}}
 
 	<div class="form group">
 		<label for="titre">Titre de l'évenement</label>
-		<input type="text" class="form_control" id="titre" name="titre">
+		<input type="text" class="form_control"  id="titre" name="titre">
 	</div>
 
 	<div class="form group">
-		<label for="surname">Nom:</label>
-		<input type="text" class="form_control" id="surname" name="surname">
+		<label for="description">Description de l'évenement</label>
+		<input type="text" class="form_control"  name="description">
 	</div>
 
 	<div class="form group">
-		<label for="email">Adresse E-Mail:</label>
-		<input type="email" class="form_control" id="email" name="email">
+		<label for="date">Date de l'évenement</label>
+		<input type="date" class="form_control"  name="date">
 	</div>
 
 	<div class="form group">
-		<label for="password">Mot de Passe:</label>
-		<input type="password" class="form_control" id="password" name="password">
-	</div>
+
+		<label for="recurrence">Fréquence</label>
+
+		<select name="recurrence">
+
+    		<option value="no" selected="selected">Unique</option>
+
+    		<option value="weekly">Hebdomadaire</option>
+
+    		<option value="monthly">Mensuelle</option>
+
+		</select>
 
 
-	<div class="form group">
+		<label for="nbrecurrence">Nombre de récurrences</label>
 
-		<label for="role">Role:</label>
+		<select name="nbrecurrence">
 
-		<select name="role">
+    		<option value="1" selected="selected">1</option>
 
-    		<option value="Etudiant" selected="selected">Etudiant</option>
+    		<option value="2">2</option>
 
-    		<option value="CESI">Observateur CESI</option>
+    		<option value="3">3</option>
 
-    		<option value="BDE">Membre BDE</option>
+    		<option value="4">4</option>
 
+    		<option value="5">5</option>
+
+    		<option value="6">6</option>
+
+    		<option value="7">7</option>
+    		
 		</select>
 
 	</div>
@@ -51,40 +66,40 @@
 
 
 	<div class="form group">
-
-		<label for="centre">Centre:</label>
-
-		<select name="centre">
-
-    		<?php
-		$centres= DB::connection('BDDnat')->select('select * from centre');
-
-			 foreach ($centres as $centre) 	
-     {
-    ?>
-      <option value= <?php echo $centre->id; ?> ><?php echo $centre->Ville; ?></option>
-    <?php
-     }
-    ?>
-			
-		}
-	?>
-		</select>
-
+		<label for="Prix">Prix d'entrée:</label>
+		<input type="number" class="form_control"  name="titre">
 	</div>
 
+
+	<div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">
+                <div class="custom-file">
+                	 <label class="custom-file-label" for="image"></label>
+                    <input type="file" id="image" name="image">
+                   
+                   
+                </div>
+
+
+
+
+
 	<div class="form group">
-		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
+		 <button style="cursor:pointer" type="submit" class="btn btn-primary">Publier</button>
         </div>
         
 	</div>
+</form>
 
+	
 	<div>
 
-		{!! $errors->first('password','') !!}
-		{!! $errors->first('Surname','<p class="help">Nom de famille non-valide</p>') !!}
-		{!! $errors->first('name','<p class="help">Prénom non-valide</p>') !!}
-		{!! $errors->first('email','<p class="help">email non-valide</p>') !!}
+		
+		{!! $errors->first('description','<p class="help">description non-valide</p>') !!}
+		{!! $errors->first('titre','<p class="help">Il faut un titre</p>') !!}
+		{!! $errors->first('date','<p class="help">date invalide</p>') !!}
+		{!! $errors->first('image','<p class="help">image invalide</p>') !!}
+		
+		
 
 	</div>
 
