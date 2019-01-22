@@ -7,9 +7,17 @@
 @section('content')
 	<section id="head">
 		<ul>
-			<li><img src="img/LogoBdeLyon.png"></li>
-			<li id="title"><h1>BDE Cesi Lyon <br> Bienvenue sur le site de Votre BDE</h1></li>
-			<li><img src="img/LogoBdeLyon.png"></li>
+			@if( auth()->check() )
+                <?php /*la suite est un peu compliquée à premiere vue, mais en fait c'est simple: auth()->user()->centre est l'ID du centre de l'utilisateur
+                On utilise DB:: pour call "getCentre" (voir script SQL si ca marche pas) cette procédure prend un ID centre et renvoie le centre associé.
+                Ensuite on echo un string qui formera la balise d'image bien propre.
+                */
+                    $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')');                                   
+                    echo  ("<li><img src=/img/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
+                    echo  ("<li id='title'><h1>BDE Cesi Lyon <br> Bienvenue sur le site de Votre BDE</h1></li>");
+                    echo  ("<li><img src=/img/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
+                ?>
+            @endif
 		</ul>	
 	</section>
 	<section id="contenu">

@@ -24,8 +24,10 @@ h1{
 	font-size: 150%;
 }
 #contenu div{
-	margin-left: 5%;
-	margin-right: 5%;
+	border:2px solid #5b88d9;
+	border-radius: 15px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 #contenu p{
 	font-size: 130%;
