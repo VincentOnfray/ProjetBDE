@@ -18,6 +18,8 @@
 	                    echo  ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>");
 	                ?>
                	</ul>
+            @else
+            	<h1>Bienvenue sur le site des BDE du Cesi </h1>
             @endif	
 	</section>
 	<section id="contenu">
@@ -39,6 +41,10 @@
 						</ul><br>
 					</p>
 			</div>
+		@else
+            <div>
+            	<p>Bonjour et bienvenue sur le site des BDE des Cesi de France.<br>Afin d'accéder aux fonctionnalitées de notre site veuillez vous identifier ou bien créer un compte avec votre adresse e-mail du cesi.<br>Ainsi grâce à votre connexion vous aurez accès aux nombreuses informations que nous vous partageons mais également à notre boutique que vous vous empresserez de piller.</p>	
+            </div>
 		@endif	
 	</section>
 @endsection

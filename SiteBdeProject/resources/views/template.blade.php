@@ -42,8 +42,8 @@
             <div  class="navigation">
                 <ul>
                     <li id="img"><img src="img/cesi-logo.png"></li>
+                    <li><a href="/"><i class="fas fa-home"></i> ACCUEIL</a></li>
                     @if(auth()->check())
-                    <li><a href="/">CESI Centre de Lyon</a></li>
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
                     <li><a href="/display_event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
                     <li><a href="/ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>

@@ -1,6 +1,5 @@
 html{
-    height: 100%;
-    width: 100%;
+font-size: 100%;
 }
 
 
@@ -15,7 +14,7 @@ width: auto;
 
 @font-face{
 	font-family:Roboto;
-	src: url(./resources/font/Roboto-Condensed.ttf);
+	src: url(Roboto-Condensed.ttf) format('ttf');
 }
 body{
     height: 100%;
@@ -134,11 +133,14 @@ main{
 footer{
 	font-family: 'Roboto', Arial, sans-serif;
 	color: white;
-	margin-bottom: 3em;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	position:relative;
 }
 .social{
 	text-align: center;
 	margin-bottom: 3em;
+
 }
 .social ul{
 	list-style-type: none;
@@ -156,6 +158,9 @@ footer{
 	text-align: center;
     padding: 0.3em 0.3em;
 	color: white;
+}
+.social p{
+	margin-top: 0;
 }
 
 
