@@ -6,9 +6,19 @@
 @section('content')
 
 <h1> Organise un max!</h1>
-<form method="POST" action="/create_event">
+<form enctype="multipart/form-data" method="POST" action="/create_event"  > 
+
 	
 	{{csrf_field()}}
+
+	
+<?php
+ 
+//Enable error reporting.
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+	 var_dump($_FILES);?>
 
 	<div class="form group">
 		<label for="titre">Titre de l'évenement</label>
@@ -71,10 +81,10 @@
 	</div>
 
 
-	<div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}">
+	<div class="form-group{{ $errors->has('image') ? ' is-invalid' : '' }}"  >
                 <div class="custom-file">
                 	 <label class="custom-file-label" for="image"></label>
-                    <input type="file" id="image" name="image">
+                    <input type="file" id="image" name="image" >
                    
                    
                 </div>
@@ -84,7 +94,7 @@
 
 
 	<div class="form group">
-		 <button style="cursor:pointer" type="submit" class="btn btn-primary">Publier</button>
+		 <button style="cursor:pointer" type="submit" class="btn btn-primary"  >Publier</button>
         </div>
         
 	</div>
@@ -105,7 +115,7 @@
 
 	
  
-	
+
 
 
 @endsection

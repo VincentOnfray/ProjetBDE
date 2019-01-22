@@ -15,9 +15,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/test', function () {
-    return view('welcome');
-});
 
 Route::get('/display_event', function () {
     return view('event.display');
@@ -25,8 +22,6 @@ Route::get('/display_event', function () {
 
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');
-
-
 
 
 Route::get('/register', 'RegistrationController@create');

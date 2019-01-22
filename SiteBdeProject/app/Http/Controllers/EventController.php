@@ -39,7 +39,9 @@ class EventController extends Controller
 			'recurrence'=>'',
 			'nbrecurrence'=>'',
 			'prix'=>'integer|min:0',
-			'image'=>'required',
+			'image'=>'required|image',
+
+	
 
 			
 
@@ -47,13 +49,25 @@ class EventController extends Controller
 		
 		
 		 
-        
-        Storage::put('test.jpg', request()->file( request()->image));
+    
+
+  		
+        // cette ligne marche, mais il est possible que le fichier temp disparaisse avent de pouvoir être lu?
+ 		echo $_FILES['image']['tmp_name'];
+
+
+
+
+
+
+ 			//var_dump($_FILES);
+ 			// echo $_FILES['image']['tmp_name'];
+        //Storage::move($_FILES['image']['tmp_name'],'test.jpg' );
 		//écrit dans la table "evenement" 
  		// DB::connection('BDDlocal')->insert
         
        
-        return redirect()->to('/display_event');
+        //return redirect()->to('/display_event');
 
 
 
@@ -64,3 +78,4 @@ class EventController extends Controller
 
 
 }
+?>
