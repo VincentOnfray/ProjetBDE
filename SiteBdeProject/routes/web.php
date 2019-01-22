@@ -19,6 +19,10 @@ Route::get('/test', function () {
     return view('welcome');
 });
 
+Route::get('/event', function () {
+    return view('evenements.display');
+});
+
 
 
 Route::get('/register', 'RegistrationController@create');
