@@ -23,9 +23,8 @@ Route::get('/display_event', function () {
     return view('event.display');
 });
 
-Route::get('/create_event', function () {
-    return view('event.create');
-});
+Route::get('/create_event', 'EventController@create');
+Route::post('/create_event', 'EventController@store');
 
 
 

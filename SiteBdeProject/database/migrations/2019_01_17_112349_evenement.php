@@ -15,9 +15,10 @@ class Evenement extends Migration
     {
          Schema::connection('BDDlocal')->create('Evenement', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titre');
             $table->string('Description');
             $table->date('Date');
-            $table->boolean('Recurrence');
+            $table->string('Recurrence');
             $table->integer('prix')->default('0');
             $table->integer('IDImage');
             $table->foreign('IDImage')->references('id')->on('Image');

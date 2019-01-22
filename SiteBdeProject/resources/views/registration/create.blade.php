@@ -1,7 +1,7 @@
 @extends("template")
 
 
-<!-- page d'enregistrement d'utilisateur, le choix de rôle est provisoire, la gestion n'etant pas explicitement demandée dans le sujet, sa priorité est plus faible que d'autres fonctionnalité-->
+<!-- page d'enregistrement d'evenement-->
 
 @section('content')
 
@@ -77,6 +77,15 @@
 		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
         </div>
         
+	</div>
+
+	<div>
+		
+		{!! $errors->first('password','<h3>Erreurs:</h3><p class="help">Mot de passe non valide (doit contenir 1 majuscule, 1 minuscule, 1 chiffre et faire au moins 6 caractères) </p>') !!}
+		{!! $errors->first('Surname','<p class="help">Nom de famille non-valide</p>') !!}
+		{!! $errors->first('name','<p class="help">Prénom non-valide</p>') !!}
+		{!! $errors->first('email','<p class="help">email non-valide</p>') !!}
+		
 	</div>
 
 	

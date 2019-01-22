@@ -15,7 +15,8 @@ class Proposition extends Migration
     {
           Schema::connection('BDDlocal')->create('Proposition', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Description');
+            $table->string('titre');
+            $table->string('description');
             $table->integer('likes')->default('0');
             $table->integer('IDutilisateur');
             $table->integer('IDImage');
