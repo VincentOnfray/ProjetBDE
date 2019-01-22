@@ -17,9 +17,11 @@ width: auto;
 	src: url(Roboto-Condensed.ttf) format('ttf');
 }
 body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
     height: 100%;
     width:100%;
-    position: absolute;
     margin: 0;
     background-color: #000000;
 }
