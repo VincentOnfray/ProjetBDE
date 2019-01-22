@@ -9,6 +9,7 @@
 @section('content')
 
 <h1> Rejoins Nous!</h1>
+
 <form id=register method="POST" action="/register">
 	
 	{{csrf_field()}}
@@ -90,7 +91,7 @@
 		{!! $errors->first('email','<p class="help">email non-valide</p>') !!}
 		
 	</div>
-
+</form>
 	
  
 	
