@@ -2,11 +2,14 @@
 
 
 <!-- page d'enregistrement d'evenement-->
+@section('css')
+<link rel="stylesheet" type="text/css" href="css/register.css">
+@endsection
 
 @section('content')
 
 <h1> Rejoins Nous!</h1>
-<form method="POST" action="/register">
+<form id=register method="POST" action="/register">
 	
 	{{csrf_field()}}
 
@@ -73,7 +76,7 @@
 
 	</div>
 
-	<div class="form group">
+	<div class="form button">
 		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
         </div>
         
