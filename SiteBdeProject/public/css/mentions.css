@@ -6,10 +6,10 @@ h2{
 	font-weight: bold;
 }
 
-.italique{
-	font-style: italic;
+#CREDIT {
+	font-weight: bold;
+	text-decoration: underline;
 }
-
 p{
 	text-align: justify;
 }
