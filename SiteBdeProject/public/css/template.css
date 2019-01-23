@@ -5,7 +5,7 @@ width:100%;
 
 body{
     height:100%;
-    width:auto;
+    width:100%;
     margin:0;
     background-color: black;
 }
@@ -21,7 +21,6 @@ main{
 	border-left-style: solid;
 	border-left-color: black;
 	background-color: white;
-	min-height: 80%;
 }
 
 footer{
