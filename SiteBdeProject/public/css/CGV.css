@@ -1,15 +1,33 @@
 h1{
 	text-align: center;
+	padding-top: 2%
 }
 
 h2{
 	font-weight: bold;
+	text-align: center;
 }
 
 .italique{
 	font-style: italic;
+	text-align: justify;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-bottom: 3%;
 }
 
-p{
+#listTop{
 	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+.para{
+	text-align: justify;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+#cgvSection {
+background-color: #EFEFEF;
 }
