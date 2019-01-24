@@ -8,18 +8,62 @@ h2{
 	padding-left: 7%;
 }
 
+#prologue{
+	text-align: justify;
+	padding-left: 8%;
+	padding-right: 8%;
+	font-size: 1.2em;
+}
+
 .textePoli{
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 
 }
+#sitesCesi{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#textePoli{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#collectData{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#cookie{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#droit{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
+#collab{
+	text-align: justify;
+	padding-left: 9%;
+	padding-right: 9%;
+}
+
 #end {
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 	padding-bottom: 3%
 }
+
 #poliProtSection {
 background-color: #EFEFEF;
 }

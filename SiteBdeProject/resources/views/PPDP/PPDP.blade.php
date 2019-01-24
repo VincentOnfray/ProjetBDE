@@ -103,6 +103,7 @@ vous créez, modifiez et accédez à votre compte personnel</li>
 <li>vous remplissez un formulaire de contact</li>
 <li>vous remplissez un formulaire de candidature à nos offres de formation</li>
 <li>vous contactez notre Service Client</li>
+</ul>
 <h2>Partage avec des tiers</h2>
 <p class="textePoli">Nous encadrons juridiquement les transferts par des engagements contractuels avec nos sous-traitants pour vous apporter un niveau élevé de sécurité.
 <br>
@@ -161,3 +162,4 @@ Conformément à la réglementation en vigueur les Utilisateurs de notre Site di
 <p id="end">Si vous avez des questions ou des réclamations ou si vous souhaitez faire part à CESI de recommandations ou des commentaires visant à améliorer notre Politique de protection des données personnelles vous pouvez envoyer un email à l’adresse cil@cesi.fr ou adresser un courrier à l’adresse suivante : CESI – Data Protection Officer – 30 rue Cambronne 75015 Paris France
 </p>
 </section>
+@endsection
