@@ -26,6 +26,10 @@ Route::get('/mentions', function () {
     return view('mentionslegales.Mentions');
 });
 
+Route::get('/ppdp', function () {
+    return view('PPDP.PPDP');
+});
+
 
 
 
