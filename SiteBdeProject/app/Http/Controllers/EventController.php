@@ -55,6 +55,9 @@ class EventController extends Controller
     	//On créé l'image d'illustration de l'évenement, puis on la récupère pour pouvoir utiliser son ID en créant l'évenement.
     	 DB::connection('BDDlocal')->insert("call newImage('".$filename."','".auth()->user()->id."');");
 
+
+    	 
+
   		$imageID = DB::connection('BDDlocal')->select("call getLastImage();");
 
 

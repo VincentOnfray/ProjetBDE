@@ -2,7 +2,7 @@
 
 
 <!-- page d'enregistrement d'evenement -->
-@if( auth()->check() )
+@if( auth()->user()->role == 'BDE' )
 @section('content')
 
 <h1> Organise un max!</h1>

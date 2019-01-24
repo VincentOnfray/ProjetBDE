@@ -1,0 +1,13 @@
+.illustration
+{
+	 width:400px; /* you can use % */
+    height: auto;
+}
+
+.ideadiv
+{
+	outline-width: 20px;
+	outline-color: black;
+	outline-style: solid;
+	width: 450px; 
+}

@@ -44,9 +44,10 @@ Route::get('/display_idea', function () {
     return view('idea.display');
 });
 
-// routes de creation d'idée
+// routes de creation et de suppréssion d'idée
 Route::get('/create_idea', 'IdeaController@create');
 Route::post('/create_idea', 'IdeaController@store');
+Route::post('/delete_idea', 'IdeaController@delete');
 
 
 // route de création d'utilisateur
