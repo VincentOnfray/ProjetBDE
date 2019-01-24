@@ -23,13 +23,11 @@
 
 
                             */
-                             $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')');
+                             $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')'); 
                                                          
-                             echo  ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>"); 
-
-                             ?>
+                              echo ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>")?>
                             <li><a href="/logout"> Déconnexion </a></li>
-                            <li id="user"><p> Bonjour, <?php echo auth()->user()->name.'   role:'.auth()->user()->role ?> </p></li>
+                            <li id="user"><p> Bonjour,  {{ auth()->user()->name.'   role:'.auth()->user()->role }} </p></li>
 
 
                         @else
@@ -46,7 +44,7 @@
                     @if(auth()->check())
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
                     <li><a href="/display_event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
-                    <li><a href="/ideas"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
+                    <li><a href="/display_idea"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
                     @endif
                      <li><a href="/contact"><i class="fa fa-phone"></i> NOUS CONTACTER</a></li>
                     <li></li>
