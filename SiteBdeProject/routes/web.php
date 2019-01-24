@@ -20,6 +20,16 @@ Route::get('/display_event', function () {
     return view('event.display');
 });
 
+//Conditions générales de ventes
+Route::get('/cgv', function () {
+    return view('CGV.CGV');
+});
+
+//Mentions Légales
+Route::get('/mentions', function () {
+    return view('mentionslegales.Mentions');
+});
+
 // création d'event
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');

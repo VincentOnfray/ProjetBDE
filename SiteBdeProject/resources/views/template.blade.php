@@ -70,9 +70,9 @@
         </div>
         <div class="infos">
             <ul>
-                <li><a href="/">Conditions générales de ventes</a></li>
+                <li><a href="/cgv">Conditions générales de ventes</a></li>
                 <li><a href="/">Politique de Protection de Données Personnelles</a></li>
-                <li><a href="/">Mentions Légales</a></li>
+                <li><a href="/mentions">Mentions Légales</a></li>
             </ul>       
         </div>
     </footer>
