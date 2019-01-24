@@ -8,6 +8,7 @@ use \Illuminate\Support\Facades\DB;
 use App\Repositories\ImageRepository;
 use \Illuminate\Support\Facades\Storage;
 use \Intervention\Image\Facades\image;
+use App\Event;
 
 
 
@@ -41,41 +42,68 @@ class EventController extends Controller
 			'prix'=>'integer|min:0',
 			'image'=>'required|image',
 
-	
-
-			
-
 		]); 
 		
 		
-		 
-    
-
-  		
-        // cette ligne marche, mais il est possible que le fichier temp disparaisse avent de pouvoir être lu?
- 		echo $_FILES['image']['tmp_name'];
-
+		//on enregistre l'image à l'aide de intervention.io 
+    	$image = request()->file('image');
+    	$filename = time().".".$image->getClientOriginalExtension();
+    	$folder = public_path('img\\userpost\\').$filename;
+    	Image::make($image)->save($folder);
 
 
+    	//On créé l'image d'illustration de l'évenement, puis on la récupère pour pouvoir utiliser son ID en créant l'évenement.
+    	 DB::connection('BDDlocal')->insert("call newImage('".$filename."','".auth()->user()->id."');");
+
+  		$imageID = DB::connection('BDDlocal')->select("call getLastImage();");
+
+
+       //créer objet Event
+
+         DB::connection('BDDlocal')->insert("call newEvent('".request()->titre."','".request()->description."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
 
 
 
- 			//var_dump($_FILES);
- 			// echo $_FILES['image']['tmp_name'];
-        //Storage::move($_FILES['image']['tmp_name'],'test.jpg' );
-		//écrit dans la table "evenement" 
- 		// DB::connection('BDDlocal')->insert
-        
+
+
+         	//en cas de récurrence de l'évenement, on créé autant d'évenements que souhaité à interval régulier, selon la fréquence        à finir 
+			switch(request()->recurrence)
+			{
+			    case 'weekly';
+
+
+
+
+			    break;
+			    case 'monthly';
+			    
+
+			    break;
+			    default;
+			       
+			    break;
+			}
+
+
+			
+			
+			
+				
+				
+
+				 return redirect()->to('/display_event');
+
+		}
+
        
-        //return redirect()->to('/display_event');
+       
 
 
-
-	}
+}
 
 
 		
 
 
-}
+
 ?>

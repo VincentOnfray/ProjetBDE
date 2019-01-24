@@ -1,12 +1,12 @@
 @extends("template")
 
 
-<!-- page d'enregistrement d'evenement -->
+<!-- page d'enregistrement d'idée-->
 @if( auth()->check() )
 @section('content')
 
-<h1> Organise un max!</h1>
-<form enctype="multipart/form-data" method="POST" action="/create_event"  > 
+<h1> La parole au peuple</h1>
+<form enctype="multipart/form-data" method="POST" action="/create_idea"  > 
 
 	
 	{{csrf_field()}}

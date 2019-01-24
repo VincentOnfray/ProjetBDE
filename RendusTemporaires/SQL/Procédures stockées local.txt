@@ -1,0 +1,12 @@
+CREATE PROCEDURE `newEvent`(IN `Title` VARCHAR(255), IN `Description` VARCHAR(255), IN `Date` DATE, IN `Recurrence` VARCHAR(255), IN `Prix` INT(255), IN `Image` INT(255)) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER 
+INSERT INTO evenement(`titre`,`Description`,`Date`,`Recurrence`,`prix`,`IDimage`)
+ VALUES (Title,Description,Date,Recurrence,Prix,Image); 
+
+CREATE PROCEDURE `newImage`(IN `name` VARCHAR(255), IN `IDcreateur` INT(255)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ INSERT into image(`image`,`IDCreateur`) VALUES (name,IDcreateur);
+
+
+CREATE PROCEDURE `getlastImage`() 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ SELECT * FROM image ORDER BY `id` DESC LIMIT 1;

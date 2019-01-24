@@ -15,20 +15,27 @@ Route::get('/', function () {
     return view('home');
 });
 
-
+// 
 Route::get('/display_event', function () {
     return view('event.display');
 });
 
+// création d'event
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');
 
 
+// routes de creation d'idée
+Route::get('/create_idea', 'IdeaController@create');
+Route::post('/create_idea', 'IdeaController@store');
+
+
+// route de création d'utilisateur
 Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 
-
+//login
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 
