@@ -10,15 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('home');
 });
 
-// 
-Route::get('/display_event', function () {
-    return view('event.display');
-});
+
 
 //Conditions générales de ventes
 Route::get('/cgv', function () {
@@ -30,10 +26,23 @@ Route::get('/mentions', function () {
     return view('mentionslegales.Mentions');
 });
 
+
+
+
+// 
+Route::get('/display_event', function () {
+    return view('event.display');
+});
+
+
 // création d'event
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');
 
+
+Route::get('/display_idea', function () {
+    return view('idea.display');
+});
 
 // routes de creation d'idée
 Route::get('/create_idea', 'IdeaController@create');
