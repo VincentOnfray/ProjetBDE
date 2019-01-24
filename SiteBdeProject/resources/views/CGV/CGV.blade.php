@@ -1,3 +1,10 @@
+@extends("template")
+
+@section('css')
+<link rel="stylesheet" type="text/css" href="css/CGV.css">
+@endsection
+
+@section ('content')
 <h1>Conditions générales de vente </h1>
 
 <p class="italique">"Nos conditions générales de vente ont été élaborées à partir d'un modèle libre et gratuit qui peut être téléchargé sur le site https://www.donneespersonnelles.fr/" 
@@ -73,3 +80,5 @@ bancaire est réalisé par notre prestataire de paiement. Les informations trans
 
 <h2>Article 16 : Droit applicable</h2>
 <p>Toutes les clauses ﬁgurant dans les présentes conditions générales de vente, ainsi que toutes les opérations d’achat et de vente qui y sont visées, seront soumises au droit français.</p>
+
+@endsection
