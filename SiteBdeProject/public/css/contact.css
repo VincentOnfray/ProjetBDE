@@ -4,14 +4,32 @@ h1{
 	text-align: center;
 }
 
-.tel{
-	text-align: left;
-	padding-left: 4%;
+.flex-container {
+  display: flex;
 }
 
-.mail{
-	text-align: right;
+#teltext {
+	padding-left: 6%;
 	padding-right: 4%;
+}
+
+#mailtext{
+	padding-left: 8%;
+	margin-right: 0;
+
+}
+
+#tel{
+	text-align: left;
+	padding-left: 6%;
+	color: #0000CD;
+	text-decoration-line: underline;
+}
+
+#mail{
+	text-align: left;
+	padding-left: 8%;
+	color: #5b88d9;
 }
 
 .fa-headset{
@@ -23,7 +41,6 @@ h1{
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
-    padding-left: 10%;
 }
 
 
