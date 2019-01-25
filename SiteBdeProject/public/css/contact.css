@@ -1,0 +1,46 @@
+h1{
+	padding-top: 15%;
+	margin-top: 0;
+	text-align: center;
+}
+
+.tel{
+	text-align: left;
+	padding-left: 4%;
+}
+
+.mail{
+	text-align: right;
+	padding-right: 4%;
+}
+
+.fa-headset{
+	color: #FFC252;
+	size: 4em;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+.fa-envelope{
+	color: #FFC252;
+	size: 4em;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+.far{
+	color: #FFC252;
+}
+.fas{
+	color: #FFC252;
+}

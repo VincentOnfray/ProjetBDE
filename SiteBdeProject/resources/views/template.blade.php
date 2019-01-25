@@ -71,7 +71,7 @@
         <div class="infos">
             <ul>
                 <li><a href="/cgv">Conditions générales de ventes</a></li>
-                <li><a href="/">Politique de Protection de Données Personnelles</a></li>
+                <li><a href="/ppdp">Politique de Protection de Données Personnelles</a></li>
                 <li><a href="/mentions">Mentions Légales</a></li>
             </ul>       
         </div>
