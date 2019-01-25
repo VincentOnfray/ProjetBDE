@@ -46,6 +46,8 @@ Route::get('/display_event', function () {
 // création d'event
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');
+Route::post('/delete_event', 'EventController@delete');
+
 
 
 Route::get('/display_idea', function () {
