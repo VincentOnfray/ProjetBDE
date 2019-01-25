@@ -1,0 +1,35 @@
+.illustration
+{
+	 width:40%; 
+    height: auto;
+}
+
+
+
+.images
+{
+	 width:10%; 
+    height: auto;
+}
+
+
+
+.eventdiv
+{
+	
+	outline-width: 5px;
+	outline-color: black;
+	outline-style: solid;
+	width: 40%; 
+	height: auto;
+}
+
+
+.imagesdiv
+{
+	
+	outline-width: 15px;
+	outline-color: grey;
+	outline-style: solid;
+	width: 450px; 
+}

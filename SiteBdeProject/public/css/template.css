@@ -8,11 +8,13 @@ body{
     width:100%;
     margin:0;
     background-color: black;
+
 }
 
 header{
 	position: sticky;
 	top: 0;
+
 }
 
 main{
@@ -28,6 +30,7 @@ footer{
 	font-family: 'Roboto', Arial, sans-serif;
 	color: white;
 	background-color: black;
+	
 
 
 }
@@ -97,6 +100,7 @@ header a:hover{
 	list-style-type: none;
 	overflow: hidden;
 	background-color: #000000;
+
 }
 .navigation li {
 	border-bottom: 1px solid grey;

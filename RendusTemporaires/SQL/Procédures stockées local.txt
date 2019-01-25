@@ -2,14 +2,27 @@ CREATE PROCEDURE `newEvent`(IN `Title` VARCHAR(255), IN `Description` VARCHAR(25
 INSERT INTO evenement(`titre`,`Description`,`Date`,`Recurrence`,`prix`,`IDimage`)
  VALUES (Title,Description,Date,Recurrence,Prix,Image); 
 
-CREATE PROCEDURE `newImage`(IN `name` VARCHAR(255), IN `IDcreateur` INT(255)) 
+CREATE PROCEDURE `newImage`(IN `name` VARCHAR(255), IN `IDcreateur` INT(255), IN `IDevent` INT(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
- INSERT into image(`image`,`IDCreateur`) VALUES (name,IDcreateur);
+ INSERT into image(`image`,`IDCreateur`,`IDEvenement`) VALUES (name,IDcreateur,IDevent);
+
+CREATE PROCEDURE `newComment`(IN `content` VARCHAR(255), IN `IDuser` INT(255), IN `IDimage` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ INSERT into commentaire(`Contenu`,`IDImage`,`IDCreateur`) VALUES (content,IDimage,IDuser);
 
 
 CREATE PROCEDURE `getlastImage`() 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
- SELECT * FROM image ORDER BY `id` DESC LIMIT 1;
+SELECT * FROM image ORDER BY `id` DESC LIMIT 1;
+
+CREATE PROCEDURE `getImages`(IN `IDevent`INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM image where IDEvenement = IDevent ;
+
+
+CREATE PROCEDURE `getComments`(IN `IDimage`INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM commentaire where `IDImage` = IDimage ;
 
 CREATE PROCEDURE `newIdea`(IN `title` VARCHAR(255), IN `description` VARCHAR(255),IN `IDcreateur` INT(10),IN `IDimage` INT(10))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
@@ -20,6 +33,60 @@ CREATE PROCEDURE `getImage`(IN `IDimage` int(10))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  SELECT * FROM image WHERE `id`= IDimage ;
 
+
 CREATE PROCEDURE `deleteIdea`(IN `IDidea` int(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  DELETE FROM proposition WHERE `id`= IDidea ;
+
+
+CREATE PROCEDURE `getEvent`(IN `IDevent` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ SELECT * FROM event WHERE `id`= IDevent ;
+
+
+
+CREATE PROCEDURE `deleteEvent`(IN `IDevent` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+DELETE FROM evenement WHERE `id`= IDevent ;
+
+
+CREATE PROCEDURE `checkSupport`(IN `IDidea` INT(10), IN `IDuser` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM supporte
+WHERE `idproposition`= IDidea 
+AND `idutilisateur`=IDuser;
+
+
+CREATE PROCEDURE `checkInsc`(IN `IDevent` INT(10), IN `IDuser` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM inscription
+WHERE `idEvenement`= IDevent 
+AND `idinscrit`=IDuser;
+
+
+CREATE PROCEDURE `signUp`(IN `IDevent`INT(10), IN `IDuser` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+INSERT INTO inscription(`idinscrit`,`idEvenement`) VALUES (IDuser,IDevent);
+
+
+/* */
+CREATE PROCEDURE `support`(IN `IDidea`INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+
+
+UPDATE proposition 
+  SET  `likes` = `likes` + 1 
+  WHERE `id` = IDidea;
+
+CREATE PROCEDURE `supported`(IN `IDidea`INT(10), IN `IDuser` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+INSERT INTO supporte(`idutilisateur`,`idproposition`) VALUES (IDuser,IDidea);
+
+
+
+
+
+
+
+
+

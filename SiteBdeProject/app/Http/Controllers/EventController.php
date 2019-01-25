@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
-use App\Repositories\ImageRepository;
-use \Illuminate\Support\Facades\Storage;
 use \Intervention\Image\Facades\image;
 use App\Event;
 
@@ -14,6 +12,17 @@ use App\Event;
 
 class EventController extends Controller
 {
+
+
+
+
+
+		
+
+	
+		 
+		 
+		
 
 
 
@@ -34,8 +43,8 @@ class EventController extends Controller
 
 		//verifie que le contenu des champs est valide
 		$this->validate(request(),[
-			'titre'=>'required',
-			'description'=>'max:250|required',
+			'titre'=>'required|regex:/^[^\']*$/',
+			'description'=>'max:250|required|regex:/^[^\']*$/',
 			'date'=>'date|required',
 			'recurrence'=>'',
 			'nbrecurrence'=>'',
@@ -53,17 +62,19 @@ class EventController extends Controller
 
 
     	//On créé l'image d'illustration de l'évenement, puis on la récupère pour pouvoir utiliser son ID en créant l'évenement.
-    	 DB::connection('BDDlocal')->insert("call newImage('".$filename."','".auth()->user()->id."');");
+    	DB::connection('BDDlocal')->insert("call newImage('".$filename."','".auth()->user()->id."','0');");
 
 
     	 
 
   		$imageID = DB::connection('BDDlocal')->select("call getLastImage();");
 
+  		
+
 
        //créer objet Event
 
-         DB::connection('BDDlocal')->insert("call newEvent('".request()->titre."','".request()->description."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
+        DB::connection('BDDlocal')->insert("call newEvent('".request()->titre."','".request()->description."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
 
 
 
@@ -73,40 +84,39 @@ class EventController extends Controller
 			switch(request()->recurrence)
 			{
 			    case 'weekly';
-
-
-
-
 			    break;
 			    case 'monthly';
-			    
-
 			    break;
 			    default;
-			       
 			    break;
 			}
-
-
-			
-			
-			
-				
-				
-
 				 return redirect()->to('/display_event');
-
 		}
 
-       
-       
-
-
-}
-
-
-		
 
 
 
-?>
+	public function delete(){ //efface un event de la BDD
+    	$this->validate(request(),[
+			'eventid'=>'int|required',
+
+		]);
+
+    	DB::connection('BDDlocal')->delete("call deleteEvent('".request()->eventid."');");
+
+    	 return redirect()->to('/display_event');
+    }
+
+    public function signUp(){ 
+    	$this->validate(request(),[
+			'eventid'=>'int|required',
+
+		]);
+		DB::connection('BDDlocal')->insert("call signUp('".request()->eventid."','".auth()->user()->id."');");
+
+		 return redirect()->back();
+
+
+    }
+
+}?>
