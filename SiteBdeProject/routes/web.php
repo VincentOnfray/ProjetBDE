@@ -48,6 +48,7 @@ Route::get('/display_idea', function () {
 Route::get('/create_idea', 'IdeaController@create');
 Route::post('/create_idea', 'IdeaController@store');
 Route::post('/delete_idea', 'IdeaController@delete');
+Route::post('/support_idea','IdeaController@support');
 
 
 // route de création d'utilisateur
