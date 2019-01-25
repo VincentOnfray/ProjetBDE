@@ -47,9 +47,9 @@
 	<div>
 
 		
-		{!! $errors->first('description','<p class="help">description non-valide</p>') !!}
-		{!! $errors->first('titre','<p class="help">Il faut un titre</p>') !!}
-		{!! $errors->first('image','<p class="help">image invalide</p>') !!}
+		{!! $errors->first('description','<p class="help">description non-valide (Les apostrophes ne sont pas acceptées)</p>') !!}
+		{!! $errors->first('titre','<p class="help">Il faut un titre valide (Les apostrophes ne sont pas acceptées)</p>') !!}
+		{!! $errors->first('image','<p class="help">Image invalide</p>') !!}
 		
 		
 
