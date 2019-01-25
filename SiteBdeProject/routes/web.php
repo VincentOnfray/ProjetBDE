@@ -36,6 +36,10 @@ Route::get('/contact', function () {
     return view('contact.contact');
 });
 
+Route::get('/mailcontact', function () {
+    return view('contact.mailcontact');
+});
+
 
 // 
 Route::get('/display_event', function () {
