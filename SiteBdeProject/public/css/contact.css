@@ -1,5 +1,5 @@
 h1{
-	padding-top: 15%;
+	padding-top: 7%;
 	margin-top: 0;
 	text-align: center;
 }
@@ -23,6 +23,7 @@ h1{
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
+    padding-left: 10%;
 }
 
 

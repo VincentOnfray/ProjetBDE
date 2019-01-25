@@ -26,11 +26,15 @@ Route::get('/mentions', function () {
     return view('mentionslegales.Mentions');
 });
 
+//Politique de Protection des Données Personnelles
 Route::get('/ppdp', function () {
     return view('PPDP.PPDP');
 });
 
-
+//Page de contact
+Route::get('/contact', function () {
+    return view('contact.contact');
+});
 
 
 // 
