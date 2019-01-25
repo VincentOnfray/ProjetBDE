@@ -54,6 +54,12 @@ Route::post('/delete_event', 'EventController@delete');
 Route::post('/signUp_event','EventController@signUp');
 
 
+//images et commentaires
+Route::post('/post_image','ImageController@store');
+Route::post('/post_comment','CommentController@store');
+Route::post('/like_image','ImageController@like');
+
+
 
 Route::get('/display_idea', function () {
     return view('idea.display');
