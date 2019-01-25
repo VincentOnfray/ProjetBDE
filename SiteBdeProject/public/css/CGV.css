@@ -1,13 +1,14 @@
+/*Main title*/
 h1{
 	text-align: center;
 	padding-top: 2%
 }
-
+/*Subheads*/
 h2{
 	font-weight: bold;
 	text-align: center;
 }
-
+/*Italic text*/
 .italique{
 	font-style: italic;
 	text-align: justify;
@@ -15,19 +16,19 @@ h2{
 	padding-right: 8%;
 	padding-bottom: 3%;
 }
-
+/*list on top of doc*/
 #listTop{
 	text-align: justify;
 	padding-left: 9%;
 	padding-right: 9%;
 }
-
+/*general text*/
 .para{
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 }
-
+/*Section for all the document*/
 #cgvSection {
 background-color: #EFEFEF;
 }

@@ -1,31 +1,34 @@
+/*Main title*/
 h1{
 	text-align: center;
 	padding-top: 2%
 }
-
+/*Subheads*/
 h2{
 	font-weight: bold;
 	padding-left: 7%;
 }
-
+/*Bold + underlined text*/
 #CREDIT {
 	font-weight: bold;
 	text-decoration: underline;
 	text-align: center;
 }
-
+/*General text*/
 .texteMentions{
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 
 }
+/*Last part of the document*/
 #end {
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 	padding-bottom: 3%
 }
+/*Background and general stuff*/
 #rightSection {
 background-color: #EFEFEF;
 }

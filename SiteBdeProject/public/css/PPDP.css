@@ -1,26 +1,34 @@
+/*Main title*/
 h1{
 	text-align: center;
 	padding-top: 2%
 }
-
+/*Subheads*/
 h2{
 	font-weight: bold;
 	padding-left: 7%;
 }
-
+/*First text*/
 #prologue{
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 	font-size: 1.2em;
 }
-
+/*General text*/
 .textePoli{
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 
 }
+/*text put into a list*/
+.interUL{
+	text-align: justify;
+	padding-left: 0;
+	padding-right: 9%;
+}
+/*Lists*/
 #sitesCesi{
 	text-align: justify;
 	padding-left: 9%;
@@ -56,14 +64,14 @@ h2{
 	padding-left: 9%;
 	padding-right: 9%;
 }
-
+/*Last part*/
 #end {
 	text-align: justify;
 	padding-left: 8%;
 	padding-right: 8%;
 	padding-bottom: 3%
 }
-
+/*All the document*/
 #poliProtSection {
 background-color: #EFEFEF;
 }
