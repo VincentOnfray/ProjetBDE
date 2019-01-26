@@ -84,7 +84,7 @@
 
 
 		</form>
-		 @endif  <!-- 4 -->
+		 @endif  <!-- 4  REPORT -->
 
 
 		 @if(auth()->check())  <!-- 5  inscription-->
@@ -117,7 +117,7 @@
 			<button class='liked' >déjà inscrit</button>
 
 
-			<form enctype="multipart/form-data" method="POST" action="/post_image">
+			<form enctype="multipart/form-data" method="POST" action="/post_image"> <!-- mais il peut poster des images en lien -->
 
 
 				{{csrf_field()}}
@@ -153,10 +153,42 @@
 		  ?>
 		  <p>Image postée par {{$creator[0]->name}} {{$creator[0]->surname}}</p>
 		  <img src={{$imgloc}} alt="images" class="images">
+		  <p>{{$image->likes}} "j'aime"</p>
 
 
 
+		  @if(auth()->check())  <!--  Secction "Likes"-->
 
+				<?php  //on  récupère les lignes correspondantes au couple utilisateur et image, et on affiche ou non l'option de like si l'utilisateur a dejà ou non aimé l'image 
+					$likeChecker = DB::connection('BDDlocal')->select("call checkLike('".$image->id."','".auth()->user()->id."');");
+				?>
+		
+
+				@if (count($likeChecker) == 0) <!-- 5 si le retour est de 0 lignes, l'utilisateur n'a pas aimé l'image, il en a donc l'option -->
+
+					<form enctype="multipart/form-data" method="POST" action="/like_image">
+
+
+							{{csrf_field()}}
+
+							<input type='number' hidden="" value={{$image->id}} name='imageid'>
+
+
+							<button class='support' type='submit'>J'aime</button>
+
+
+					</form>
+				@endif <!-- 5 -->
+
+
+				@if(count($likeChecker) > 0) <!-- 6 Si l'utilisateur a déjà aimé, il ne peut plus le faire -->
+
+
+					<button class='liked' >déjà aimé</button>
+
+				@endif <!--6  -->
+
+		@endif <!-- LIKES-->
 
 
 
@@ -209,11 +241,11 @@
 
 
 
-		</div>
+		</div> <!-- div d'image indiv  -->
 
 		 @endforeach <!-- 8  -->
 
-	</div>
+	</div><!-- Div des images -->
 	@endforeach <!-- 2 -->
 </div>
 	

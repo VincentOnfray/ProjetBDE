@@ -20,8 +20,8 @@ class ideaController extends Controller
 
     public function store(){
     	$this->validate(request(),[
-			'titre'=>'required|regex:/^[^\']*$/',
-			'description'=>'max:250|required|regex:/^[^\']*$/',
+			'titre'=>'required',
+			'description'=>'max:250',
 			'image'=>'required|image',
 
 		]); 
@@ -40,7 +40,7 @@ class ideaController extends Controller
 
     	$IDimage = DB::connection('BDDlocal')->select("call getLastImage();");
 
-    	DB::connection('BDDlocal')->insert("call newIdea('".request()->titre."','".request()->description."','".auth()->user()->id."','".$IDimage[0]->id."');");
+    	DB::connection('BDDlocal')->insert("call newIdea('".addslashes(request()->titre)."','".addslashes(request()->description)."','".auth()->user()->id."','".$IDimage[0]->id."');");
     	 
 
     	return redirect()->to('/display_idea');

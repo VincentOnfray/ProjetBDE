@@ -11,13 +11,13 @@ class commentController extends Controller
    public function store(){
    	$this->validate(request(),[
 			
-			'comment'=>'required|regex:/^[^\']*$/',
+			'comment'=>'required',
 			'imageid'=>'int|required',
 
 		]);
 
-   	DB::connection('BDDlocal')->insert("call newComment('".request()->comment."','".auth()->user()->id."','".request()->imageid."');");
-
+   	DB::connection('BDDlocal')->insert("call newComment('".addslashes(request()->comment)."','".auth()->user()->id."','".request()->imageid."');");
+   	
    	return back();
    }
 }

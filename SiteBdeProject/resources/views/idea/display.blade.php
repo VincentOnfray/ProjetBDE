@@ -76,7 +76,7 @@
 		</form>
 		@endif
 
-		 @if(auth()->check())  <!--  Supports-->
+		 @if(auth()->check())  <!--  4 Supports-->
 
 			<?php  //on  récupère les lignes correspondantes au couple utilisateur et idée, et on affiche ou non l'option de like si l'utilisateur a dejà ou non supporté l'evenement
 			$likeChecker = DB::connection('BDDlocal')->select("call checkSupport('".$idea->id."','".auth()->user()->id."');");

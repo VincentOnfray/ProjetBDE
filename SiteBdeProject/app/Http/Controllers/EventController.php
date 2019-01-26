@@ -43,8 +43,8 @@ class EventController extends Controller
 
 		//verifie que le contenu des champs est valide
 		$this->validate(request(),[
-			'titre'=>'required|regex:/^[^\']*$/',
-			'description'=>'max:250|required|regex:/^[^\']*$/',
+			'titre'=>'required',
+			'description'=>'max:250',
 			'date'=>'date|required',
 			'recurrence'=>'',
 			'nbrecurrence'=>'',
@@ -74,7 +74,7 @@ class EventController extends Controller
 
        //créer objet Event
 
-        DB::connection('BDDlocal')->insert("call newEvent('".request()->titre."','".request()->description."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
+        DB::connection('BDDlocal')->insert("call newEvent('".addslashes(request()->titre)."','".addslashes(request()->description)."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
 
 
 

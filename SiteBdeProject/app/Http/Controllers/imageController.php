@@ -30,4 +30,18 @@ class imageController extends Controller
 
     	return back();
     }
+
+    public function like(){
+        $this->validate(request(),[
+            
+            'imageid'=>'required',
+            
+                    ]); 
+
+         DB::connection('BDDlocal')->insert("call `like`('".request()->imageid."');");
+
+        DB::connection('BDDlocal')->insert("call liked('".request()->imageid."','".auth()->user()->id."');");
+
+        return redirect()->to('/display_event');
+    }
 }
