@@ -42,7 +42,7 @@ Route::get('/mailcontact', function () {
 
 
 // 
-Route::get('/display_event','IdeaController@display'
+Route::get('/display_event','EventController@display'
 );
 
 
@@ -60,9 +60,7 @@ Route::post('/like_image','ImageController@like');
 
 
 
-Route::get('/display_idea', function () {
-    return view('idea.display');
-});
+Route::get('/display_idea','IdeaController@display');
 
 // routes de creation et de suppréssion d'idée
 Route::get('/create_idea', 'IdeaController@create');
