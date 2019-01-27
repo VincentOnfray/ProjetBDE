@@ -42,9 +42,8 @@ Route::get('/mailcontact', function () {
 
 
 // 
-Route::get('/display_event', function () {
-    return view('event.display');
-});
+Route::get('/display_event','IdeaController@display'
+);
 
 
 // création d'event
