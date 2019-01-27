@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class BoutiqueController extends Controller
 {
    public function getBoutique(){
-   		return view('boutique.shop');
+   		return view('boutique.home');
    }
 }
