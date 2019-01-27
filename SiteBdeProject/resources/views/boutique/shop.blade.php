@@ -27,8 +27,8 @@
         				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           					<a class="dropdown-item" href="#">Les plus vendues</a>
           					<div class="dropdown-divider"></div>
-          					<a class="dropdown-item" href="#">Catégorie 1</a>
-          					<a class="dropdown-item" href="#">Catégorie 2</a>
+          					<a class="dropdown-item" href="/catégorie1">Catégorie 1</a>
+          					<a class="dropdown-item" href="/catégorie2">Catégorie 2</a>
           					<a class="dropdown-item" href="#">...</a>
         				</div>
       			</li>
