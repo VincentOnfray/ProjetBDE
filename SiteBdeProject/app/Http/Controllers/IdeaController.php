@@ -18,6 +18,26 @@ class ideaController extends Controller
     	return view('idea.create');
     }
 
+
+
+     public function display(){
+
+         $ideas = DB::connection('BDDlocal')->Select("SELECT * FROM proposition ORDER BY likes DESC");
+    
+  
+    foreach ($ideas as $idea){
+        $image = DB::connection('BDDlocal')->select("call getImage('".$idea->IDImage."');");
+        $imgloc = 'img\\userpost\\'.$image[0]->image;
+        $idea->IDImage = $imgloc;
+}
+
+            return view('idea.display')->withIdeas($ideas);
+
+    }
+
+
+
+
     public function store(){
     	$this->validate(request(),[
 			'titre'=>'required',
