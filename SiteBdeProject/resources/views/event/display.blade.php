@@ -230,6 +230,25 @@
 						  <p>Commentaire de {{$comment->creator}}</p>
 						  <p>{{$comment->Contenu}}</p>
 					</div>
+					<div>
+					@if(auth()->user()->role == "BDE") <!-- 3 bouton de suppression BDE-->
+
+
+
+					<form enctype="multipart/form-data" method="POST" action="/delete_comment">
+
+
+						{{csrf_field()}}
+
+						<input type='number' hidden="" value={{$comment->id}} name='commentid'>
+
+
+						<button class='delete' type='submit'>Supprimer le commentaire</button>
+
+
+					</form>
+				</div>
+		@endif  <!-- 3 Suppression BDE -->
 
 				 @endforeach <!-- 8  -->
 

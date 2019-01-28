@@ -20,4 +20,19 @@ class commentController extends Controller
    	
    	return back();
    }
+
+   public function delete(){
+
+      $this->validate(request(),[
+         
+         'commentid'=>'required',
+         
+
+      ]);
+
+      DB::connection('BDDlocal')->insert("call deleteComment('".request()->commentid."');");
+      
+      return back();
+
+   }
 }
