@@ -61,7 +61,7 @@
 					</form>
 				</div>
 				<div>
-					<a href={{ asset("D:\wamp642\www\ProjetBDE\SiteBdeProject\storage\app\public\inscriptions\".$event->id.".png") }}>telecharger la liste des liste des isncrits</a>
+					<a href={{ asset("inscriptions\\inscription".$event->id.".txt"  ) }} download>telecharger la liste des liste des isncrits</a>
 				</div>
 		@endif  <!-- 3 Suppression BDE -->
 

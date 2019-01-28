@@ -46,13 +46,16 @@ class EventController extends Controller
 
 			//recup des inscrits et création du fichier.csv
 			$inscrits = DB::connection('BDDlocal')->select("call getSubID('".$event->id."');");
-			$fileContent = "";
+			$fileContent = $event->titre."; ";
+			$count = 0;
 
 			foreach ($inscrits as $inscrit) {
 				$info = DB::connection('BDDnat')->select("call getUser('".$inscrit->IDInscrit."');");
 				$fileContent = $fileContent . $info[0]->name.",".$info[0]->surname."; ";
+				$count++;
 			}
-			Storage::disk('public')->put('inscription'.$event->id.'.txt', $fileContent);
+				$fileContent = $fileContent . $count.";";
+			Storage::disk('inscriptions')->put('inscription'.$event->id.'.txt', $fileContent);
 			
 
 
