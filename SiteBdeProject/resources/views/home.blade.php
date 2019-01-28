@@ -1,7 +1,7 @@
 @extends("template")
 
 @section('css')
-<link rel="stylesheet" href="css/home.css" />
+<link rel="stylesheet" href="../css/home.css" />
 @endsection
 
 @section('content')

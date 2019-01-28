@@ -1,7 +1,7 @@
 @extends("template")
 
 @section('css')
-<link rel="stylesheet" href="css/shop.css" />
+<link rel="stylesheet" href="../css/shop.css" />
 @yield('css+')
 @endsection
 
@@ -27,8 +27,8 @@
         				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           					<a class="dropdown-item" href="#">Les plus vendues</a>
           					<div class="dropdown-divider"></div>
-          					<a class="dropdown-item" href="/catégorie1">Catégorie 1</a>
-          					<a class="dropdown-item" href="/catégorie2">Catégorie 2</a>
+          					<a class="dropdown-item" href="/shop/catégorie1">Catégorie 1</a>
+          					<a class="dropdown-item" href="/shop/catégorie2">Catégorie 2</a>
           					<a class="dropdown-item" href="#">...</a>
         				</div>
       			</li>
