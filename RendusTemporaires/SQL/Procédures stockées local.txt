@@ -46,10 +46,6 @@ CREATE PROCEDURE `deleteComment`(IN `IDComment` int(10))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  DELETE FROM commentaire WHERE `id`= IDComment;
 
-CREATE PROCEDURE `getSubID`(IN `IDEvent` INT(10))
-NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
-SELECT * FROM `inscription` WHERE `IDEvenement`= IDEvent;
-
 
 
 
@@ -112,7 +108,9 @@ UPDATE image
   SET  `likes` = `likes` + 1 
   WHERE `id` = IDimage;
 
-
+CREATE PROCEDURE `getshop`(IN cate VARCHAR(255)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM article where `Catégorie`=cate; 
 
 
 

@@ -11,9 +11,8 @@ class BoutiqueController extends Controller
    		return view('boutique.home');
    }
 
-      public function getCategorie($n){
-   		$shop = DB::connection('BDDlocal')->select("call getGoodies();");
-
+      public function getCategorie($n,Request $request){
+   		$shop = DB::connection('BDDlocal')->select("call getshop(?);",[$n]);
    		return view('boutique.'.$n)->withShop($shop);
    }
 }
