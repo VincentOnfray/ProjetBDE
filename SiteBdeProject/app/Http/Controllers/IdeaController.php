@@ -29,7 +29,15 @@ class ideaController extends Controller
         $image = DB::connection('BDDlocal')->select("call getImage('".$idea->IDImage."');");
         $imgloc = 'img\\userpost\\'.$image[0]->image;
         $idea->IDImage = $imgloc;
-}
+        
+        
+        $hasLiked = count( DB::connection('BDDlocal')->select("call checkSupport('".$idea->id."','".auth()->user()->id."');"));
+
+
+
+        $idea->hasLiked = $hasLiked;
+
+        }
 
             return view('idea.display')->withIdeas($ideas);
 
@@ -66,6 +74,9 @@ class ideaController extends Controller
     	return redirect()->to('/display_idea');
 
     }
+
+
+    
 
 
     public function delete(){ //fonction effaçant l'idée

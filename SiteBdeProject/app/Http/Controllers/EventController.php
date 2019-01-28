@@ -14,24 +14,62 @@ class EventController extends Controller
 {
 
 
-
-
-
-		
-
-	
-		 
-		 
-		
-
-
-
-	
     //initie le formulaire
 	Public function create()
 	{
 
 		return view('event.create');
+
+
+	}
+
+	Public function display()
+	{
+
+		$events = DB::connection('BDDlocal')->Select("SELECT * FROM evenement ORDER BY id ");
+		
+		
+
+		foreach ($events as $event) {
+
+			
+		$image = DB::connection('BDDlocal')->select("call getImage('".$event->IDImage."');");
+        $imgloc = 'img\\userpost\\'.$image[0]->image;
+        $event->IDImage = $imgloc;
+
+        $insc =  count(DB::connection('BDDlocal')->select("call checkInsc('".$event->id."','".auth()->user()->id."');"));
+        $event->insc = $insc;
+        $event->images =  DB::connection('BDDlocal')->Select("call getImages('".$event->id."');");
+
+	       foreach ($event->images as $image) {
+				$user = DB::connection('BDDnat')->select("call getUser('".$image->IDCreateur."');");
+
+		       	$image->creator =$user[0]->name." ".$user[0]->surname;
+
+
+		       	$image->hasLiked = count(DB::connection('BDDlocal')->select("call checklike('".$image->id."','".auth()->user()->id."');"));
+		       	echo 	$image->hasLiked;
+		       	$image->comments =  DB::connection('BDDlocal')->Select("call getComments('".$image->id."');");
+
+		       	foreach ($image->comments as $comment) {
+
+		       		$user = DB::connection('BDDnat')->select("call getUser('".$comment->IDCreateur."');");
+		       		$comment->creator =$user[0]->name." ".$user[0]->surname;
+		       	}
+
+
+       }
+
+
+
+
+
+
+
+
+		}
+
+		 return view('event.display')->withEvents($events);
 
 
 	}

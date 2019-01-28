@@ -15,6 +15,10 @@
 	<a href="create_event">organiser</a>
 	@endif <!-- 1 BDE  -->
 
+	<?php
+
+	$events = DB::connection('BDDlocal')->Select("SELECT * FROM evenement ORDER BY id ");
+	?>
 	<!-- Cette boucle créé simplement -->
 
 
@@ -37,9 +41,12 @@
 
 		<p>Prix: {{$prix}} </p>
 	
-	
+	<?php 
+		$illustration = DB::connection('BDDlocal')->select("call getImage('".$event->IDImage."');");
+		$imgloc = 'img\\userpost\\'.$illustration[0]->image;
+		?>	
 
-			<img src={{$event->IDImage}} alt="illustration" class="illustration">
+			<img src={{$imgloc}} alt="illustration" class="illustration">
 
 
 
@@ -82,10 +89,12 @@
 
 		 @if(auth()->check())  <!-- 5  inscription-->
 
-			
+			<?php  //on  récupère les lignes correspondantes au couple utilisateur et idée, et on affiche ou non l'option de like si l'utilisateur a dejà ou non supporté l'evenement
+			$likeChecker = DB::connection('BDDlocal')->select("call checkInsc('".$event->id."','".auth()->user()->id."');");
+			?>
 		
 
-			@if ($event->insc == 0) <!-- 6 si le retour est de 0 lignes, l'utilisateur n'est pas inscrit, il en a donc l'option -->
+			@if (count($likeChecker) == 0) <!-- 6 si le retour est de 0 lignes, l'utilisateur n'est pas inscrit, il en a donc l'option -->
 
 			<form enctype="multipart/form-data" method="POST" action="/signUp_event">
 
@@ -102,7 +111,7 @@
 				@endif <!-- 6 -->
 
 
-				@if($event->insc > 0) <!-- 7 Si l'utilisateur est deja inscrit, il ne peut plus le faire -->
+				@if(count($likeChecker) > 0) <!-- 7 Si l'utilisateur est deja inscrit, il ne peut plus le faire -->
 
 
 			<button class='liked' >déjà inscrit</button>
@@ -132,25 +141,30 @@
 	</div>
 	<br>
 	<div class="imagesdiv">
-		
+		<?php 
+			$images = DB::connection('BDDlocal')->Select("call getImages('".$event->id."');");
+		 ?>
 
-		 @foreach ($event->images as $image)<!-- 8 images -->
+		 @foreach ($images as $image)<!-- 8 images -->
 		 <div class="imgdiv">
 		 <?php 
 		 $imgloc = 'img\\userpost\\'.$image->image;
+		 $creator = DB::connection('BDDnat')->select("call getUser('".$image->IDCreateur."');");
 		  ?>
-		  <p>Image postée par {{$image->creator}}</p>
+		  <p>Image postée par {{$creator[0]->name}} {{$creator[0]->surname}}</p>
 		  <img src={{$imgloc}} alt="images" class="images">
 		  <p>{{$image->likes}} "j'aime"</p>
 
 
 
-		  @if(auth()->check())  <!--  Section "Likes"-->
+		  @if(auth()->check())  <!--  Secction "Likes"-->
 
-				
+				<?php  //on  récupère les lignes correspondantes au couple utilisateur et image, et on affiche ou non l'option de like si l'utilisateur a dejà ou non aimé l'image 
+					$likeChecker = DB::connection('BDDlocal')->select("call checkLike('".$image->id."','".auth()->user()->id."');");
+				?>
 		
 
-				@if (	$image->hasLiked == 0) <!-- 5 si le retour est de 0 lignes, l'utilisateur n'a pas aimé l'image, il en a donc l'option -->
+				@if (count($likeChecker) == 0) <!-- 5 si le retour est de 0 lignes, l'utilisateur n'a pas aimé l'image, il en a donc l'option -->
 
 					<form enctype="multipart/form-data" method="POST" action="/like_image">
 
@@ -167,7 +181,7 @@
 				@endif <!-- 5 -->
 
 
-				@if(	$image->hasLiked > 0) <!-- 6 Si l'utilisateur a déjà aimé, il ne peut plus le faire -->
+				@if(count($likeChecker) > 0) <!-- 6 Si l'utilisateur a déjà aimé, il ne peut plus le faire -->
 
 
 					<button class='liked' >déjà aimé</button>
@@ -182,7 +196,7 @@
 		 
 		  <!-- //Section commentaires: -->
 			<div class="Commentsdiv">
-				<div>
+
 				<form enctype="multipart/form-data" method="POST" action="/post_comment">
 
 
@@ -198,16 +212,20 @@
 					
 		 		</form>
 
-		 		</div>
 
 
 
-				
+				<?php 
+					$comments = DB::connection('BDDlocal')->Select("call getComments('".$image->id."');");
+				?>
 
-				 @foreach ($image->comments as $comment)<!-- 8 commentaires -->
+				 @foreach ($comments as $comment)<!-- 8 commentaires -->
 					 <div class="commdiv">
-						 
-						  <p>Commentaire de {{$comment->creator}}</p>
+						 <?php 
+						
+						 $creator = DB::connection('BDDnat')->select("call getUser('".$comment->IDCreateur."');");
+						  ?>
+						  <p>Commentaire de {{$creator[0]->name}} {{$creator[0]->surname}}</p>
 						  <p>{{$comment->Contenu}}</p>
 					</div>
 
