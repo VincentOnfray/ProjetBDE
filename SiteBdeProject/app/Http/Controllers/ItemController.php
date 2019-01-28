@@ -25,11 +25,11 @@ class ItemController extends Controller
 
 		//verifie que le contenu des champs est valide
 		$this->validate(request(),[
-			'image'->'required|image',
-			'name'->'required',
-			'description'->'required',
-			'price'->'required|int',
-			'category'->'required',
+			'image'=>'required',
+			'name'=>'required',
+			'description'=>'required',
+			'price'=>'required|int',
+			'category'=>'required',
 
 		]); 
 		
@@ -61,16 +61,8 @@ class ItemController extends Controller
 
 
          	//en cas de récurrence de l'évenement, on créé autant d'évenements que souhaité à interval régulier, selon la fréquence        à finir 
-			switch(request()->recurrence)
-			{
-			    case 'weekly';
-			    break;
-			    case 'monthly';
-			    break;
-			    default;
-			    break;
-			}
-				 return redirect()->to('/display_event');
+			
+				 return redirect()->to('/shop');
 		}
 
 

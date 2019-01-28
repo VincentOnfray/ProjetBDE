@@ -18,7 +18,7 @@
     		<ul class="navbar-nav mr-auto">
     			@if( auth()->user()->role =="BDE")
     			<li class="nav-item ">
-        			<a class="nav-link" href="#"><i class="fas fa-plus"></i> Ajouter un Article</i></a>
+        			<a class="nav-link" href="create_item"><i class="fas fa-plus"></i> Ajouter un Article</i></a>
       			</li>
 		     	@endif
 	  			<li class="nav-item dropdown">
