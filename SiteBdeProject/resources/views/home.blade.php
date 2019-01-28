@@ -46,7 +46,7 @@
             <div>
             	<p>Bonjour et bienvenue sur le site des BDE des Cesi de France.<br>Afin d'accéder aux fonctionnalitées de notre site veuillez vous identifier ou bien créer un compte avec votre adresse e-mail du cesi.<br>Ainsi grâce à votre connexion vous aurez accès aux nombreuses informations que nous vous partageons mais également à notre boutique que vous vous empresserez de piller.</p>	
             </div>
-            <script> alert('En continuant votre navigation sur ce site, vous acceptez de recevoir des cookies de notre part')</script>
+            <script> alert('En continuant votre navigation sur ce site, vous acceptez de recevoir des cookies de notre part :)')</script>
 		@endif	
 	</section>
 @endsection
