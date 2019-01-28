@@ -25,6 +25,10 @@ NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 SELECT * FROM commentaire where commentaire.`IDImage` = IDimage ;
 
 CREATE PROCEDURE `newIdea`(IN `title` VARCHAR(255), IN `description` VARCHAR(255),IN `IDcreateur` INT(10),IN `IDimage` INT(10))
+
+CREATE PROCEDURE `getshop`(IN cate VARCHAR(255)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM article where `Catégorie`=cate; 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  INSERT into proposition(`titre`,`description`,`IDutilisateur`,`IDImage`) VALUES (title,description,IDcreateur,IDimage);
 

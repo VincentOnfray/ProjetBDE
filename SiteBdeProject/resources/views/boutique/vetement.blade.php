@@ -1,4 +1,9 @@
 @extends("boutique.shop")
 @section('page')
-Je suis la page de la catégorie 2
+
+	@foreach($shop as $shop)
+		<h3>{{$shop->nom}}</h3> <br>
+		<p>{{$shop->Prix}}</p><br>
+		<p>{{$shop->Description}}</p><br>
+	@endforeach
 @endsection
