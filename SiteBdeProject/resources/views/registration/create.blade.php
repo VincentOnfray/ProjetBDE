@@ -76,10 +76,11 @@
 		</select>
 
 	</div>
-	<div class="form group">
-			<label for="check">J'accepte les conditions d'utilisation du site: </label>
-			<input type="checkbox" name="check">
+	<div class="form group" href="/ppdp">
+			<label for="check" href="/ppdp">J'accepte les conditions d'utilisation du site: </label>
 
+			<input type="checkbox" name="check">
+			<a  href="/ppdp" >lire la PPDP</a>
 	</div>
 
 	<div class="form button">

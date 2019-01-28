@@ -13,10 +13,7 @@
 	<a href="create_idea">proposer</a>
 
 
-	<?php
 
-	// $ideas = DB::connection('BDDlocal')->Select("SELECT * FROM proposition ORDER BY likes DESC");
-	?>
 	
 	@foreach ($ideas as $idea)  <!-- 2 Pour chaque idée, on créé une DIV et tous les elements correspondants -->
 		
