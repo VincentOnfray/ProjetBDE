@@ -12,7 +12,9 @@
 <div class="main">	
 
 	 @if(auth()->user()->role == "BDE") <!-- 1 BDE  -->
-	<a href="create_event">organiser</a>
+	 <a class="btn btn-primary" href="create_event" role="button">Organiser</a>
+
+	
 	@endif <!-- 1 BDE  -->
 
 	<!-- Cette boucle créé simplement -->
