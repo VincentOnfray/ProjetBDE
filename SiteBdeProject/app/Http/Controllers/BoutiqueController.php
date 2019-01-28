@@ -15,5 +15,11 @@ class BoutiqueController extends Controller
    		$shop = DB::connection('BDDlocal')->select("call getshop(?);",[$n]);
    		return view('boutique.'.$n)->withShop($shop);
    }
+
+   
+
+
+
+
 }
 

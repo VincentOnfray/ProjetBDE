@@ -12,11 +12,11 @@ class ItemController extends Controller
     Public function create()
 	{
 
-		if(!(auth()->check())){
-			return redirect()->to('/login');
+		if(!(auth()->user()->role=="BDE")){
+			return redirect()->to('home');
 		}
 
-		return view('event.create');
+		return view('boutique.create');
 
 
 	}
@@ -28,7 +28,7 @@ class ItemController extends Controller
 			'image'->'required|image',
 			'name'->'required',
 			'description'->'required',
-			'price'->'required',
+			'price'->'required|int',
 			'category'->'required',
 
 		]); 
