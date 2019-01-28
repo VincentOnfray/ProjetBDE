@@ -62,6 +62,7 @@
 				</div>
 				<div>
 					<a href={{ asset("inscriptions\\inscription".$event->id.".txt"  ) }} download>telecharger la liste des liste des isncrits</a>
+					<a href={{ asset("inscriptions\\inscription" ) }} download>telecharger la liste des liste des isncrits</a>
 				</div>
 		@endif  <!-- 3 Suppression BDE -->
 
@@ -271,6 +272,7 @@
 		 @endforeach <!-- 8  -->
 
 	</div><!-- Div des images -->
+</div>
 	@endforeach <!-- 2 -->
 </div>
 	
