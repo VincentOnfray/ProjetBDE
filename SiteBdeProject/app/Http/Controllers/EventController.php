@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
+use \Illuminate\Support\Facades\Storage;
 use \Intervention\Image\Facades\image;
 use App\Event;
+
 
 
 
@@ -40,6 +42,20 @@ class EventController extends Controller
 
 		foreach ($events as $event) {
 
+
+
+			//recup des inscrits et création du fichier.csv
+			$inscrits = DB::connection('BDDlocal')->select("call getSubID('".$event->id."');");
+			$fileContent = "";
+
+			foreach ($inscrits as $inscrit) {
+				$info = DB::connection('BDDnat')->select("call getUser('".$inscrit->IDInscrit."');");
+				$fileContent = $fileContent . $info[0]->name.",".$info[0]->surname."; ";
+			}
+			Storage::disk('public')->put('inscription'.$event->id.'.txt', $fileContent);
+			
+
+
 			
 		$image = DB::connection('BDDlocal')->select("call getImage('".$event->IDImage."');");
         $imgloc = 'img\\userpost\\'.$image[0]->image;
@@ -56,7 +72,7 @@ class EventController extends Controller
 
 
 		       	$image->hasLiked = count(DB::connection('BDDlocal')->select("call checklike('".$image->id."','".auth()->user()->id."');"));
-		       	echo 	$image->hasLiked;
+		       	
 		       	$image->comments =  DB::connection('BDDlocal')->Select("call getComments('".$image->id."');");
 
 		       	foreach ($image->comments as $comment) {
