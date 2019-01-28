@@ -1,10 +1,10 @@
-INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunette","Lunette de soleil à l'effigie de votre BDE préferé","5","0","goodies","");
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","5","0","goodies","");
 
-INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunette","Lunette de soleil à l'effigie de votre BDE préferé","10","0","goodies","");
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","10","0","goodies","");
 
-INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunette","Lunette de soleil à l'effigie de votre BDE préferé","15","0","goodies","");
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","15","0","goodies","");
 
-INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunette","Lunette de soleil à l'effigie de votre BDE préferé","20","0","goodies","");
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","20","0","goodies","");
 
 INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Porte clés","Porte clés à l'effigie de votre BDE préferé","5","0","goodies","");
 
