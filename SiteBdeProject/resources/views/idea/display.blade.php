@@ -9,7 +9,7 @@
 
 @section('content')
 @if(auth()->check())  <!-- 1 -->
-
+	<div>
 	<a href="create_idea">proposer</a>
 
 
@@ -104,6 +104,8 @@
 		</div>
 
 	@endforeach <!-- 2 -->
+	
+</div>
 
 	
 	

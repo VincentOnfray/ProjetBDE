@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use ZipArchive;
+use Mail;
 use \Illuminate\Support\Facades\DB;
 
 
@@ -68,6 +69,11 @@ class Controller extends BaseController
 
 
     		return view('dl');
+
+            Mail::send('vuedumail', array('mail' => $mail),function($message) use ($request){
+                $message->to('elcoco.01@orange.fr')->subject($request['subject'])->from($request['email']);
+            });
+            
     	}
 
 
@@ -78,4 +84,7 @@ class Controller extends BaseController
 
     	
     }
+
+
+
 }

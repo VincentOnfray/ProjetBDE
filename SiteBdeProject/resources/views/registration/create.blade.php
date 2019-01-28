@@ -80,6 +80,7 @@
 			<label for="check" href="/ppdp">J'accepte les conditions d'utilisation du site: </label>
 
 			<input type="checkbox" name="check">
+			<a class="btn btn-primary" href="/ppdp" role="button">Politique de protection des données</a>
 			<a  href="/ppdp" >lire la PPDP</a>
 	</div>
 

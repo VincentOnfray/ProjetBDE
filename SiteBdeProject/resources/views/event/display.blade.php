@@ -274,6 +274,7 @@
 	</div><!-- Div des images -->
 </div>
 	@endforeach <!-- 2 -->
+	
 </div>
 	
 	
