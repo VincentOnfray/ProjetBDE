@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity=sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="../css/template.css" />
 	@yield ('css')
 	
     <title>BDE Cesi Lyon </title>
@@ -26,7 +26,7 @@
                             */
                              $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')'); 
                                                          
-                              echo ("<li><img src=/img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>")?>
+                              echo ("<li><img src=../img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>")?>
                             <li><a href="/logout"> Déconnexion </a></li>
                             <li id="user"><p> Bonjour,  {{ auth()->user()->name.'   role:'.auth()->user()->role }} </p></li>
 
@@ -40,7 +40,7 @@
 			</nav>
             <div  class="navigation">
                 <ul>
-                    <li id="img"><img src="img/cesi-logo.png"></li>
+                    <li id="img"><img src="../img/cesi-logo.png"></li>
                     <li><a href="/"><i class="fas fa-home"></i> ACCUEIL</a></li>
                     @if(auth()->check())
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>

@@ -78,6 +78,10 @@ Route::post('/register', 'RegistrationController@store');
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 
+//logout
 Route::get('/logout', 'SessionsController@destroy');
 
+
+//shop
 Route::get('/shop', 'BoutiqueController@getBoutique');
+Route::get('/shop/catégorie{n}', ['uses'=>'BoutiqueController@getCategorie','as'=>'shop.catégorie{n}']);
