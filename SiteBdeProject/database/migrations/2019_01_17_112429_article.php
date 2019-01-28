@@ -17,8 +17,8 @@ class Article extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('Description');
-            $table->integer('Prix')->default('0');
-            $table->integer('Ventes');
+            $table->integer('prix')->default('0');
+            $table->integer('Ventes')->default('0');
             $table->String('Catégorie');
             $table->String('Image');
             

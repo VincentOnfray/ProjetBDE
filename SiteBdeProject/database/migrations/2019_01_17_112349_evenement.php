@@ -19,7 +19,7 @@ class Evenement extends Migration
             $table->string('Description');
             $table->date('Date');
             $table->string('Recurrence');
-            $table->float('prix',8,2)->default('0');
+            $table->integer('prix')->default('0');
             $table->integer('IDImage');
             $table->foreign('IDImage')->references('id')->on('Image');
             

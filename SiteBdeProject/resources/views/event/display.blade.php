@@ -32,7 +32,7 @@
 
 				<?php //on traduit un prix de 0 en "gratuit"
 						if($event->prix <= 0){$prix = "Gratuit";}
-						else{$prix = $event->prix." €";}?>
+						else{$prix = ($event->prix/100)." €";}?>
 
 
 

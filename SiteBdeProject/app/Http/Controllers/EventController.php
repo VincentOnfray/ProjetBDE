@@ -140,7 +140,7 @@ class EventController extends Controller
 
        //créer objet Event
 
-        DB::connection('BDDlocal')->insert("call newEvent('".addslashes(request()->titre)."','".addslashes(request()->description)."','".request()->date."','".request()->recurrence."','".request()->prix."','".$imageID[0]->id."');");
+        DB::connection('BDDlocal')->insert("call newEvent('".addslashes(request()->titre)."','".addslashes(request()->description)."','".request()->date."','".request()->recurrence."','".((request()->prix)*100)."','".$imageID[0]->id."');");
 
 
 

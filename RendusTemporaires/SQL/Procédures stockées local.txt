@@ -113,7 +113,9 @@ NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 SELECT * FROM article where `Catégorie`=cate; 
 
 
-
+CREATE PROCEDURE `newItem`(IN `name` VARCHAR(255), IN `description` VARCHAR(255), IN `price` INT(10), IN `category` VARCHAR(20), IN `image` VARCHAR(20))
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ INSERT into Article(`nom`,`Description`,`Prix`,`Catégorie`,`Image`) VALUES (name,description,price,category,image);
 
 
 
