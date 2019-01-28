@@ -47,7 +47,7 @@
 		<label for="nbrecurrence">Nombre de récurrences</label>
 
 		
-		<input type="number" class="form_control"  name="nbrecurrence" value='1'>
+		<input type="number" class="form_control"  name="nbrecurrence" value='1' >
 	</div>
 
 
@@ -58,7 +58,7 @@
 
 	<div class="form group">
 		<label for="prix">Prix d'entrée (€):</label>
-		<input type="number" class="form_control"  name="prix" value="0">
+		<input type="number" class="form_control"  minimum='0' name="prix" value="0" step="0.01">
 	</div>
 
 

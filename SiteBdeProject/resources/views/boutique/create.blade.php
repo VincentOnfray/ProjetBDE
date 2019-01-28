@@ -25,8 +25,8 @@
 	</div>
 
 	<div class="form group">
-			<label for="Catégorie">Catégorie</label>
-		<select name="Catégorie">
+			<label for="Category">Catégorie</label>
+		<select name="Category">
 
     		<option value="Vetement" selected="selected">Vetements</option>
 
@@ -41,7 +41,7 @@
 
 	<div class="form group">
 			<label for="price">Prix (€)</label>
-			<input type="number" class="form_control"  id="price" name="price">
+			<input type="number" class="form_control"  id="price" name="price" step="0.01">
 	</div>
 
     <div class="custom-file">

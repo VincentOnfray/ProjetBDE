@@ -114,7 +114,7 @@ class EventController extends Controller
 			'date'=>'date|required',
 			'recurrence'=>'',
 			'nbrecurrence'=>'',
-			'prix'=>'integer|min:0',
+			'prix'=>'numeric|min:0',
 			'image'=>'required|image',
 
 		]); 
@@ -122,6 +122,7 @@ class EventController extends Controller
 		
 		//on enregistre l'image à l'aide de intervention.io 
     	$image = request()->file('image');
+    	
     	$filename = time().".".$image->getClientOriginalExtension();
     	$folder = public_path('img\\userpost\\').$filename;
     	Image::make($image)->save($folder);

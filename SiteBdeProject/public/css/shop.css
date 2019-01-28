@@ -10,3 +10,9 @@
 	background-color:#dddddd;
 	border-color: #FFC252;
 }
+
+.imgArticle
+{
+	max-height: 400px;
+	max-width: auto;
+}

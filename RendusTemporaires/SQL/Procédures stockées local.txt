@@ -46,6 +46,9 @@ CREATE PROCEDURE `deleteComment`(IN `IDComment` int(10))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  DELETE FROM commentaire WHERE `id`= IDComment;
 
+CREATE PROCEDURE `deleteArticle`(IN `IDarticle` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ DELETE FROM article WHERE `id`= IDarticle;
 
 
 
@@ -113,7 +116,7 @@ NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 SELECT * FROM article where `Catégorie`=cate; 
 
 
-CREATE PROCEDURE `newItem`(IN `name` VARCHAR(255), IN `description` VARCHAR(255), IN `price` INT(10), IN `category` VARCHAR(20), IN `image` VARCHAR(20))
+CREATE PROCEDURE `newItem`(IN `name` VARCHAR(255), IN `description` VARCHAR(255), IN `price` INT(100), IN `category` VARCHAR(20), IN `image` VARCHAR(20))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  INSERT into Article(`nom`,`Description`,`Prix`,`Catégorie`,`Image`) VALUES (name,description,price,category,image);
 

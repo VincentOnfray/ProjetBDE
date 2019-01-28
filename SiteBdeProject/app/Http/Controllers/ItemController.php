@@ -25,13 +25,13 @@ class ItemController extends Controller
 
 		//verifie que le contenu des champs est valide
 		$this->validate(request(),[
-			'image'=>'required|image',
 			'name'=>'required',
-			'description'=>'required',
-			'price'=>'required|int',
-			'category'=>'required',
-
+			'description'=>'required|max:250',
+			'category'=>'',
+			'price'=>'numeric|required',
+			'image'=>'required',
 		]); 
+
 		
 		
 		//on enregistre l'image à l'aide de intervention.io 
@@ -40,27 +40,16 @@ class ItemController extends Controller
     	$folder = public_path('img\\boutique\\').$filename;
     	Image::make($image)->save($folder);
 
+       
 
-    	
-
-
-    	 
-
-
-  		
-
-
-       //créer objet Event
-
-        DB::connection('BDDlocal')->insert("call newItem('".addslashes(request()->name)."','".addslashes(request()->description)."','".request()->price."','".request()->category."','".$filename."');");
+        DB::connection('BDDlocal')->insert("call newItem('".addslashes(request()->name)."','".addslashes(request()->description)."','".(request()->price*100)."','".request()->category."','".$filename."');");
 
 
 
 
 
-         	//en cas de récurrence de l'évenement, on créé autant d'évenements que souhaité à interval régulier, selon la fréquence        à finir 
-			
-				 return redirect()->to('/shop');
+        
+		 return redirect()->to('/shop');
 		}
 
 
@@ -68,13 +57,13 @@ class ItemController extends Controller
 
 	public function delete(){ //efface un event de la BDD
     	$this->validate(request(),[
-			'eventid'=>'int|required',
+			'articleid'=>'required',
 
 		]);
+    	
+    	DB::connection('BDDlocal')->delete("call deleteArticle('".request()->articleid."');");
 
-    	DB::connection('BDDlocal')->delete("call deleteEvent('".request()->eventid."');");
-
-    	 return redirect()->to('/display_event');
+    	 return redirect()->to('/shop');
     }
 
 

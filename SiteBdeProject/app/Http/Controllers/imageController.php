@@ -21,6 +21,7 @@ class imageController extends Controller
 
     		//on enregistre l'image à l'aide de intervention.io 
     	$image = request()->file('image');
+      
     	$filename = time().".".$image->getClientOriginalExtension();
     	$folder = public_path('img\\userpost\\').$filename;
     	Image::make($image)->save($folder);
