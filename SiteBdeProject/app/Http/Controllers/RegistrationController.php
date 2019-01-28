@@ -33,7 +33,8 @@ class RegistrationController extends Controller
 		'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X]).*$/',
 		),
 		'role'=>'required',
-		'centre'=>'required'
+		'centre'=>'required',
+		'check'=>'accepted',
 	]); 
 														
 														

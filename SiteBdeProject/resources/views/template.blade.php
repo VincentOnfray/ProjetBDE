@@ -47,7 +47,11 @@
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>
                     <li><a href="/display_event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
                     <li><a href="/display_idea"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
+                    @if(auth()->user()->role == "CESI")
+                     <li><a href="/download_images"><i class="far"></i>RECUPERER LES IMAGES </a></li>
                     @endif
+                    @endif
+                    
                      <li><a href="/contact"><i class="fa fa-phone"></i> NOUS CONTACTER</a></li>
                     <li></li>
                 </ul>

@@ -61,8 +61,8 @@
 					</form>
 				</div>
 				<div>
-					<a href={{ asset("inscriptions\\inscription".$event->id.".txt"  ) }} download>telecharger la liste des liste des isncrits</a>
-					<a href={{ asset("inscriptions\\inscription" ) }} download>telecharger la liste des liste des isncrits</a>
+					<a href={{ asset("inscriptions\\inscription".$event->id.".txt"  ) }} download>telecharger la liste des liste des inscrits</a>
+				
 				</div>
 		@endif  <!-- 3 Suppression BDE -->
 

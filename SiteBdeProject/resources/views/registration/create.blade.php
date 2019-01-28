@@ -76,8 +76,17 @@
 		</select>
 
 	</div>
+	<div class="form group">
+			<label for="check">J'accepte les conditions d'utilisation du site: </label>
+			<input type="checkbox" name="check">
+
+	</div>
 
 	<div class="form button">
+
+	
+
+
 		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
         </div>
         
