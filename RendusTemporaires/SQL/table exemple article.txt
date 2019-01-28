@@ -1,0 +1,21 @@
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","5","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","10","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","15","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Lunettes","Lunettes de soleil à l'effigie de votre BDE préferé","20","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Porte clés","Porte clés à l'effigie de votre BDE préferé","5","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Porte clés","Porte clés à l'effigie de votre BDE préferé","10","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Porte clés","Porte clés à l'effigie de votre BDE préferé","15","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Porte clés","Porte clés à l'effigie de votre BDE préferé","20","0","goodies","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Pull","Pull personnalisable à l'effigie de votre BDE préferé","40","0","vetement","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("Pull","Pull à l'effigie de votre BDE préferé","35","0","vetement","");
+
+INSERT INTO `article`(`nom`, `Description`, `Prix`, `Ventes`, `Catégorie`, `Image`) VALUES ("t-shirt","t-shirt à l'effigie de votre BDE préferé","25","0","vetement","");
