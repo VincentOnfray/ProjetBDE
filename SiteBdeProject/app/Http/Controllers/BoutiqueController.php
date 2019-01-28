@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\DB;
 
 class BoutiqueController extends Controller
 {
@@ -11,7 +12,9 @@ class BoutiqueController extends Controller
    }
 
       public function getCategorie($n){
-   		return view('boutique.categorie'.$n);
+   		$shop = DB::connection('BDDlocal')->select("call getGoodies();");
+
+   		return view('boutique.'.$n)->withShop($shop);
    }
 }
 
