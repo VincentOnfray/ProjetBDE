@@ -14,6 +14,9 @@ class ideaController extends Controller
 
 
     public function create(){
+        if(!(auth()->check())){
+            return redirect()->to('/login');
+        }
 
     	return view('idea.create');
     }
@@ -21,6 +24,9 @@ class ideaController extends Controller
 
 
      public function display(){
+        if(!(auth()->check())){
+            return redirect()->to('/login');
+        }
 
          $ideas = DB::connection('BDDlocal')->Select("SELECT * FROM proposition ORDER BY likes DESC");
     

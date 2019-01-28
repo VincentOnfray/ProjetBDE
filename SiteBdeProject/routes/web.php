@@ -42,21 +42,24 @@ Route::get('/mailcontact', function () {
 
 
 // 
-Route::get('/display_event','EventController@display'
-);
 
 
-// création d'event
+
+// event
 Route::get('/create_event', 'EventController@create');
 Route::post('/create_event', 'EventController@store');
 Route::post('/delete_event', 'EventController@delete');
 Route::post('/signUp_event','EventController@signUp');
+Route::get('/display_event','EventController@display'
+);
+
 
 
 //images et commentaires
 Route::post('/post_image','ImageController@store');
 Route::post('/post_comment','CommentController@store');
 Route::post('/like_image','ImageController@like');
+Route::post('/delete_image','ImageController@delete');
 
 
 
