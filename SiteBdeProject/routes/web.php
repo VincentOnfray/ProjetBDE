@@ -41,7 +41,7 @@ Route::get('/mailcontact', function () {
 });
 
 
-// 
+Route::get('/dowload-images','Controller@dl');
 
 
 
