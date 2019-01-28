@@ -44,4 +44,15 @@ class imageController extends Controller
 
         return redirect()->to('/display_event');
     }
+
+    public function delete(){
+        $this->validate(request(),[
+            
+            'imageid'=>'required',
+                    ]);
+         DB::connection('BDDlocal')->insert("call deleteImage('".request()->imageid."');");
+
+
+         return redirect()->to('/display_event');
+    }   
 }

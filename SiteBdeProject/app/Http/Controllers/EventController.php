@@ -18,6 +18,10 @@ class EventController extends Controller
 	Public function create()
 	{
 
+		if(!(auth()->check())){
+			return redirect()->to('/login');
+		}
+
 		return view('event.create');
 
 
@@ -25,6 +29,10 @@ class EventController extends Controller
 
 	Public function display()
 	{
+		if(!(auth()->check())){
+			return redirect()->to('/login');
+		}
+		
 
 		$events = DB::connection('BDDlocal')->Select("SELECT * FROM evenement ORDER BY id ");
 		
@@ -68,6 +76,7 @@ class EventController extends Controller
 
 
 		}
+	
 
 		 return view('event.display')->withEvents($events);
 
