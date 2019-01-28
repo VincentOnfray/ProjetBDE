@@ -79,10 +79,10 @@
 
 	</div>
 	<div class="form group check" href="/ppdp">
-			<label for="check" href="/ppdp">J'accepte les conditions d'utilisation du site</label>
-
-			<input type="checkbox" name="check" class="check">
+			<label for="check" href="/ppdp"><input type="checkbox" name="check" class="check"> J'accepte les conditions d'utilisation du site </label>
 			<a class="btn btn-primary" href="/ppdp" role="button">Politique de protection des données</a>
+
+			
 		
 			
 	</div>

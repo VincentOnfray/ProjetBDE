@@ -21,16 +21,18 @@
         			<a class="nav-link" href="#"><i class="fas fa-plus"></i> Ajouter un Article</i></a>
       			</li>
 		     	@endif
-  			<li class="nav-item dropdown">
-        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          			Catégories</a>
-        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          					<a class="dropdown-item" href="#">Les plus vendues</a>
-          					<div class="dropdown-divider"></div>
-          					<a class="dropdown-item" href="/shop/goodies">Goodies</a>
-          					<a class="dropdown-item" href="/shop/vetement">Vetements</a>
-          					<a class="dropdown-item">...</a>
-        				</div>
+	  			<li class="nav-item dropdown">
+	        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          			Catégories</a>
+	        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          					<a class="dropdown-item" href="#">Les plus vendues</a>
+	          					<div class="dropdown-divider"></div>
+	          					<a class="dropdown-item" href="/shop/goodies">Goodies</a>
+	          					<a class="dropdown-item" href="/shop/vetement">Vetements</a>
+	        				</div>
+	      		</li>
+	      		<li class="nav-item ">
+        			<a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
       			</li>
     		</ul>
     		<form class="form-inline my-2 my-lg-0">

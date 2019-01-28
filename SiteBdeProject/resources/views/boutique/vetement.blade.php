@@ -1,4 +1,5 @@
 @extends("boutique.shop")
+
 @section('css+')
 <link rel="stylesheet" href="../css/shop_content.css" />
 @endsection

@@ -1,3 +1,7 @@
+.navbar{
+	position: static;
+}
+
 .btn-outline-success{
 	background-color: transparent;
 	border-color: #FFC252;
