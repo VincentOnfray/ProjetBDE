@@ -84,4 +84,4 @@ Route::get('/logout', 'SessionsController@destroy');
 
 //shop
 Route::get('/shop', 'BoutiqueController@getBoutique');
-Route::get('/shop/catégorie{n}', ['uses'=>'BoutiqueController@getCategorie','as'=>'shop.catégorie{n}']);
+Route::get('/shop/{n}','BoutiqueController@getCategorie');
