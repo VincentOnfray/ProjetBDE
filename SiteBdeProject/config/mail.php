@@ -55,11 +55,10 @@ return [
     |
     */
 
-    'from' => [
+        'from' => [
         'address' => 'cesiprojetbde@gmail.com',
         'name' => 'administrateur',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
