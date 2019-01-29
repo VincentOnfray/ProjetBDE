@@ -48,7 +48,7 @@
 	  	</a>
 	</div>
 
-	<div>
+	<div class="texts">
 		<p>Cette Boutique a pour ambition de vous vendre des goodies ou des vêtements afin que l'argent récolté servent à la mise en place de nouveaux évenements ou de rendre réels vos idées que vous nous proposez dans la partie prévue à cette effet.<br> En espérant que ce que nous vous proposons à la vente vous plaisent et que vous passiez commande rapidement ;)</p>
 	</div>
 
