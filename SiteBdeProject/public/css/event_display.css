@@ -1,4 +1,7 @@
-
+#navBar, #list{
+	margin-left: 2%;
+	margin-right: 2%;
+}
 .contenue{
 	display: flex;
 	margin:0;
@@ -49,4 +52,8 @@ p{
 .comment{
 	display: flex;
 	flex-direction: column;
+}
+.images{
+	max-width: 300px;
+	max-height: 300px;
 }
