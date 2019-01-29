@@ -79,8 +79,8 @@ AND `like`.`idutilisateur`=IDuser;
 CREATE PROCEDURE `checkCart`(IN `IDarticle` INT(10), IN `IDuser` int(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 SELECT * FROM `commande`
-WHERE `idarticle`= IDarticle 
-AND `idutilisateur`=IDuser
+WHERE `commande`.`idarticle`= IDarticle 
+AND `idutilisateur`= IDuser
 AND `status`= 'panier' ;
 
 CREATE PROCEDURE `addToCart`(IN `IDarticle` INT(10), IN `IDuser` INT(10)) 

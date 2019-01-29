@@ -25,6 +25,8 @@
 
 		        @endif
 
+		        
+
 		        @if($article->chosen==0)
 		        <form class="form-inline my-2 my-lg-0"  method="POST" action="/choose_item" >
 		          {{csrf_field()}}
