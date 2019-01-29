@@ -76,6 +76,17 @@ SELECT * FROM `like`
 WHERE `like`.`idimage`= IDimage 
 AND `like`.`idutilisateur`=IDuser;
 
+CREATE PROCEDURE `checkCart`(IN `IDarticle` INT(10), IN `IDuser` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT * FROM `commande`
+WHERE `idarticle`= IDarticle 
+AND `idutilisateur`=IDuser
+AND `status`= 'panier' ;
+
+CREATE PROCEDURE `addToCart`(IN `IDarticle` INT(10), IN `IDuser` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+INSERT INTO commande(`idarticle`,`idutilisateur`) VALUES (IDarticle,IDuser);
+
 
 
 CREATE PROCEDURE `checkInsc`(IN `IDevent` INT(10), IN `IDuser` int(10)) 
