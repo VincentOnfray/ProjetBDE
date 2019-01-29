@@ -16,9 +16,12 @@ class BoutiqueController extends Controller
 			return redirect()->to('/login');
 		}
 
+        $cart = DB::connection('BDDlocal')->select("call getCart('".auth()->user()->id."');");
+
+
   
 
-   		return view('boutique.home');
+   		return view('boutique.home')->withCart($cart);
    }
 
 
@@ -45,10 +48,13 @@ class BoutiqueController extends Controller
 
         }
 
+        $cart = DB::connection('BDDlocal')->select("call getCart('".auth()->user()->id."');");
+
+        
 
 
 
-   		return view('boutique.vitrine')->withShop($shop);
+   		return view('boutique.vitrine')->withShop($shop)->withCart($cart);
    }
 
 
@@ -81,8 +87,10 @@ class BoutiqueController extends Controller
 
 
 
+        $cart = DB::connection('BDDlocal')->select("call getCart('".auth()->user()->id."');");
 
-   		return view('boutique.vitrine')->withShop($shop);
+
+   		return view('boutique.vitrine')->withShop($shop)->withCart($cart);
    }
 
    

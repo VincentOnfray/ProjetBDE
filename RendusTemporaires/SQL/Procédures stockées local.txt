@@ -33,6 +33,10 @@ CREATE PROCEDURE `getImage`(IN `IDimage` int(10))
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
  SELECT * FROM image WHERE `id`= IDimage ;
 
+CREATE PROCEDURE `getArticle`(IN `IDarticle` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+ SELECT * FROM article WHERE `id`= IDarticle ;
+
 
 CREATE PROCEDURE `deleteIdea`(IN `IDidea` int(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
@@ -83,9 +87,44 @@ WHERE `commande`.`idarticle`= IDarticle
 AND `idutilisateur`= IDuser
 AND `status`= 'panier' ;
 
+
+
+CREATE PROCEDURE `getCart`( IN `IDuser` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+SELECT *
+FROM `commande`
+INNER JOIN `article` ON `commande`.`idarticle` = `article`.`id` 
+AND `idutilisateur`= IDuser
+AND `status`= 'panier' ;
+
+
+CREATE PROCEDURE `emptyCart`( IN `IDuser` int(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+DELETE FROM commande
+WHERE idutilisateur = IDuser
+AND status = 'panier';
+
+CREATE  PROCEDURE `getSubID`(IN `IDEvent` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER 
+SELECT * FROM `inscription` WHERE `IDEvenement`= IDEvent ;
+
+
+
+
+
+
+
 CREATE PROCEDURE `addToCart`(IN `IDarticle` INT(10), IN `IDuser` INT(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 INSERT INTO commande(`idarticle`,`idutilisateur`) VALUES (IDarticle,IDuser);
+
+
+CREATE PROCEDURE `removeFromCart`(IN `IDarticle` INT(10), IN `IDuser` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+DELETE from Commande 
+WHERE `commande`.`idarticle`= IDarticle 
+AND `idutilisateur`= IDuser
+AND `status`= 'panier' ;
 
 
 

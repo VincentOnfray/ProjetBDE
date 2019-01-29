@@ -91,4 +91,6 @@ Route::get('/create_item','ItemController@create');
 Route::post('/create_item','ItemController@store');
 Route::post('/delete_item','ItemController@delete');
 Route::post('/choose_item','ItemController@choose');
+Route::post('/empty_cart','ItemController@emptyCart');
+Route::post('/removefromcart','ItemController@removefromcart');
 

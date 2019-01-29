@@ -79,6 +79,26 @@ class ItemController extends Controller
     }
 
 
+    public function emptyCart(){ //efface un event de la BDD
+    	
+    	
+    	DB::connection('BDDlocal')->delete("call emptyCart('".auth()->user()->id."');");
+
+    	 return back();
+    }
+
+
+public function removefromcart(){ //efface un event de la BDD
+    	$this->validate(request(),[
+			'articleid'=>'required',
+
+		]);
+    	
+    	DB::connection('BDDlocal')->delete("call removeFromCart('".request()->articleid."','".auth()->user()->id."');");
+
+    	 return back();
+    }
+
 
 
    }
