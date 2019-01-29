@@ -126,7 +126,7 @@ header a:hover{
 
 .fa-phone{
 	color: #FFC252;
-	size: 3em;
+	
 	-moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);

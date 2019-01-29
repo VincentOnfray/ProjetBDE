@@ -27,9 +27,9 @@
                             */
                              $centre = DB::connection('BDDnat')->select('call getCentre('.auth()->user()->centre.')'); 
                                                          
-                              echo ("<li><img src=../img/logos/".$centre[0]->ImageBDE." alt='logo ".$centre[0]->Ville."' class='logoBDE'></li>")?>
+                              echo ("<li><img src=../img/logos/".$centre[0]->ImageBDE." alt='logo' ".$centre[0]->Ville."' class='logoBDE'></li>")?>
                             <li><a href="/logout"> Déconnexion </a></li>
-                            <li id="user"><p> Bonjour,  {{ auth()->user()->name.'   role:'.auth()->user()->role }} </p></li>
+                            <li id="user"><p> Bonjour,  {{ auth()->user()->name }} </p></li>
 
 
                         @else
@@ -41,7 +41,7 @@
 			</nav>
             <div  class="navigation">
                 <ul>
-                    <li id="img"><img src="../img/cesi-logo.png"></li>
+                    <li id="img"><img src="../img/cesi-logo.png" alt='logo Cesi'></li>
                     <li><a href="/"><i class="fas fa-home"></i> ACCUEIL</a></li>
                     @if(auth()->check())
                     <li><a href="/shop"><i class="fas fa-shopping-cart"></i> BOUTIQUE</a></li>

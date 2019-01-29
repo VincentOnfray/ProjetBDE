@@ -32,11 +32,12 @@ Route::get('/ppdp', function () {
 });
 
 //Page de contact
-Route::post('/contact', "Mailcontroller@mail");
+Route::get('/contact', "Mailcontroller@mail");
 
 Route::get('/mailcontact', function () {
     return view('contact.mailcontact');
 });
+Route::post('/mailcontact', 'Mailcontroller@send');
 
 
 Route::get('/download_images','Controller@dl');

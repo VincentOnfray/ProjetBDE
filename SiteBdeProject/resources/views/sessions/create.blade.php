@@ -28,7 +28,7 @@
 		 <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
         </div>
         
-	</div>
+	
 </form>
 
 

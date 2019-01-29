@@ -5,7 +5,7 @@
 @endsection
 
 @section ('content')
-<balise id="hautdepage"></balise>
+<div id="hautdepage"></div>
 <section id="cgvSection">
 
 <h1>Conditions générales de vente </h1>
@@ -15,7 +15,7 @@
 <p class='para'>Ces CGV sont accessibles à tout moment sur le site htpp://www.cesi.bde.com et prévaudront sur toute autre document. </p>
 <p class='para'>Le Client déclare avoir pris connaissance des présentes CGV et les avoir acceptées lors de son inscritpion au site http://www.cesi.bde.com</p>
 <p class='para'>Sauf preuve contraire, les données enregistrées dans le système informatique du Vendeur constituent la preuve de l'ensemble des transactions conclues avec le Client</p>
-<p class='para'>Les coordonnées du Vendeur sont les suivantes : 
+<p class='para'>Les coordonnées du Vendeur sont les suivantes : </p>
 <ul id="listTop"><li>CESI SAS, Association loi 1901</li>
 	<li>Capital social de 1.1M euros</li>
 	<li>Immatriculé au RCS de Paris, sous le numéro 775 772 572</li>
@@ -23,7 +23,7 @@
 	<li>mail : contact@cesi.fr</li>
 	<li>téléphone : 01 44 19 23 45</li>
 </ul>
-</p>
+
 
 <p class='para'>D’une part, Et la personne physique ou morale procédant à l’achat de produits ou services de la société, Ci-après, « l’Acheteur », ou « le Client » D’autre part, Il a été exposé et convenu ce qui suit :</p>
 
@@ -89,4 +89,5 @@ bancaire est réalisé par notre prestataire de paiement. Les informations trans
 	<a href="#hautdepage"><i class="fas fa-arrow-up"></i></a>
 </div>
 </section>
+
 @endsection

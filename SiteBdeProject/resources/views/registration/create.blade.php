@@ -41,7 +41,7 @@
 
 		<label for="role">Role:</label>
 
-		<select name="role">
+		<select name="role" id="role">
 
     		<option value="Etudiant" selected="selected">Etudiant</option>
 
@@ -58,9 +58,9 @@
 
 	<div class="group">
 
-		<label for="centre">Centre:</label>
+		<label for="centre" >Centre:</label>
 
-		<select name="centre">
+		<select name="centre" id='centre'>
 
     		<?php
 		$centres= DB::connection('BDDnat')->select('select * from centre');
@@ -70,16 +70,14 @@
     ?>
       <option value= <?php echo $centre->id; ?> ><?php echo $centre->Ville; ?></option>
     <?php
-     }
-    ?>
-			
-		}
+     }	
+		
 	?>
 		</select>
 
 	</div>
-	<div class="group check" href="/ppdp">
-			<label for="check" href="/ppdp"><input type="checkbox" name="check" class="check"> J'accepte les conditions d'utilisation du site </label>
+	<div class="group check">
+			<label for="check" ><input type="checkbox" name="check" class="check" id='check'> J'accepte les conditions d'utilisation du site </label>
 			<a class="btn btn-primary" href="/ppdp" role="button">Politique de protection des données</a>
 
 			
@@ -95,7 +93,7 @@
 		 <button style="cursor:pointer" type="submit" class="btn btn-primary">S'inscrire</button>
         </div>
         
-	</div>
+	
 
 	<div>
 		

@@ -1,7 +1,0 @@
-CREATE DEFINER=`root`@`localhost` PROCEDURE `getCentre`(IN `IDcentre` INT) NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER SELECT * FROM centre where( centre.id = IDcentre);
-
-
-CREATE PROCEDURE `getUser`(IN `IDuser` int(10)) 
-NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
- SELECT * FROM users WHERE `id`= IDuser ;
- 

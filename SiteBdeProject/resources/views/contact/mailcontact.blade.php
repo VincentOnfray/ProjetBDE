@@ -8,11 +8,11 @@
 
 @section ('content')
 <h1>Contactez nous !</h1>
-<form id=contact method="POST" action="/contact">
-	<input type="hidden" name="token" value="{{csrf_token()}}">
+<form id=contact method="POST" action="/mailcontact">
+	
 	{{csrf_field()}}
 		<div>
-          <label for="mail">E-mail:</label> <input type="email" id="mail" name="email">
+          <label for="mail">E-mail:</label> <input type="email" id="mail" name="email" value=<?php if(auth()->user()){echo "'".auth()->user()->email."'";}?>>
         </div>
 
         <div>

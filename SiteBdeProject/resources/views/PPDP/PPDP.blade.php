@@ -5,7 +5,7 @@
 @endsection
 
 @section ('content')
-<balise id="hautdepage"></balise>
+<div id="hautdepage"></div>
 <section id="poliProtSection">
 <h1>Politique de Protection des Données Personnelles</h1>
 
@@ -81,7 +81,7 @@ Différents types de cookies sont utilisés sur notre Site :</p>
 <li>Des cookies fonctionnels : Il s’agit des cookies qui nous permettent de personnaliser votre expérience sur notre plateforme en mémorisant vos préférences. Ces cookies peuvent être placés par une tierce partie pour notre compte, mais elle n’est pas autorisée à les utiliser à d’autres fins que celles décrite.</li>
 
 <li>Des cookies de ciblage : Ces cookies sont liés aux services fournis par des tierces parties, comme les boutons « J’aime » ou « Partager ». Ces cookies sont placés par des tierces parties.</li>
-<p class="interUl"><strong>Types de cookies utilisés.</strong> Les types de cookies suivants sont utilisés sur ce Site :</p>
+<li class="interUl"><strong>Types de cookies utilisés.</strong> Les types de cookies suivants sont utilisés sur ce Site :</li>
 
 <li>Cookies « temporaires » : ce type de cookie est actif dans votre navigateur jusqu’à ce que vous quittiez notre plateforme et expire si vous n’accédez pas au Site pendant une certaine période donnée.</li>
 
