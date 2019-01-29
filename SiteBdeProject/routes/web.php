@@ -84,8 +84,11 @@ Route::get('/logout', 'SessionsController@destroy');
 
 
 //shop
-Route::get('/shop', 'BoutiqueController@getBoutique');
+Route::get('/shop', 'BoutiqueController@getMain');
+Route::get('/shop_all', 'BoutiqueController@getBoutique');
 Route::get('/shop/{n}','BoutiqueController@getCategorie');
 Route::get('/create_item','ItemController@create');
 Route::post('/create_item','ItemController@store');
 Route::post('/delete_item','ItemController@delete');
+Route::post('/choose_item','ItemController@choose');
+

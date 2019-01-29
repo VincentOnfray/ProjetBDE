@@ -49,7 +49,7 @@ class ItemController extends Controller
 
 
         
-		 return redirect()->to('/shop');
+		 return redirect()->to('/shop/'.request()->category);
 		}
 
 
@@ -63,7 +63,19 @@ class ItemController extends Controller
     	
     	DB::connection('BDDlocal')->delete("call deleteArticle('".request()->articleid."');");
 
-    	 return redirect()->to('/shop');
+    	 return back();
+    }
+
+
+    public function choose(){ //efface un event de la BDD
+    	$this->validate(request(),[
+			'articleid'=>'required',
+
+		]);
+    	
+    	DB::connection('BDDlocal')->delete("call addToCart('".request()->articleid."','".auth()->user()->id."');");
+
+    	 return back();
     }
 
 

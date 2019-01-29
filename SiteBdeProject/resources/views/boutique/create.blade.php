@@ -1,9 +1,9 @@
-@extends("template")
+@extends("boutique.shop")
 
 
 <!-- page d'enregistrement d'idée-->
 
-@section('content')
+@section('page')
 
 <h1> Ajouter un produit</h1>
 <form enctype="multipart/form-data" method="POST" action="/create_item"  > 
@@ -25,14 +25,14 @@
 	</div>
 
 	<div class="form group">
-			<label for="Category">Catégorie</label>
-		<select name="Category">
+			<label for="category">Catégorie</label>
+		<select name="category">
 
-    		<option value="Vetement" selected="selected">Vetements</option>
+    		<option value="vetement" >Vetements</option>
 
-    		<option value="Goodies">Goodies</option>
+    		<option value="goodies">Goodies</option>
 
-    		<option value="Autres">Autre</option>
+    		<option value="autres" selected="selected">Autre</option>
 
 		</select>
 
