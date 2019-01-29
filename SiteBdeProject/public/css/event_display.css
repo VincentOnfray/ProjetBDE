@@ -1,56 +1,41 @@
+
+.contenue{
+	display: flex;
+	margin:0;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.event{
+	max-height: 33%;
+	max-width: 33%;
+	border: 1px;
+	border-style: solid;
+	border-radius: 15px;
+	padding: 1%;
+}
+.card{
+	position: static;
+	display: flex;²
+	flex-direction: column;
+	background-color: transparent;
+
+}
 .illustration
 {
-	width:30%; 
+	width: 100%; 
     height: auto;
-    max-height: 30%;
+    position: static;
 }
-
-.btn
-{
-	margin-top: 1%;
-	margin-left: 2%;
-	margin-bottom: 2%;
-	max-height: 40px;
-	justify-content: left;
+#descriptif{
+	border: 2px solid black;
+	padding: 1%;
 }
-
-
-
-.images
-{
-	 width:10%; 
-    height: auto;
+h4{
+	margin: 0;
 }
-
-
-
-.eventdiv
-{
-	
-	outline-width: 5px;
-	outline-color: black;
-	outline-style: solid;
-	width: 120%; 
-	height: auto;
-}
-
-.card
-{
-	position: static;
-}
-
-
-
-.file
-{
-	padding-top: 2px;
-	width: 20%;
-}
-
-
-.imagesdiv
-{
-	
-	
-	width: 450px; 
+p{
+	margin:0;
 }
