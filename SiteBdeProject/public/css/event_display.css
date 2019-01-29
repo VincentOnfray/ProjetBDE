@@ -16,16 +16,22 @@
 	border-radius: 15px;
 	padding: 1%;
 }
+.event:hover{
+	background-color: #FFC252;
+	opacity: 10%;
+}
 .card{
-	position: static;
-	display: flex;²
-	flex-direction: column;
 	background-color: transparent;
+	position: static;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center
 
 }
 .illustration
 {
-	width: 100%; 
+	max-width: 300px; 
     height: auto;
     position: static;
 }
@@ -38,4 +44,9 @@ h4{
 }
 p{
 	margin:0;
+}
+
+.comment{
+	display: flex;
+	flex-direction: column;
 }

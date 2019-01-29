@@ -55,11 +55,10 @@
 
 										<div class="input-group mb-4 file">
 										  	<div class="input-group-prepend"></div> 
-										  
-										  		<div class="custom-file">
-										  			<label for="description">Image:</label>
+										  		<div class="comment">
+										  			<label for="description">Image de l'évènement: </label>
 										    		<input type="file" class="" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name='image'>
-										     		<button class='btn' type='submit'>Poster l'image</button>
+										    		<button class='btn' type='submit'>Poster l'image</button>
 										  		</div>
 										</div>
 								</form>
