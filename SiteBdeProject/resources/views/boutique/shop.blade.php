@@ -40,12 +40,14 @@
                     
                       @foreach($cart as $item)
                       <a class="dropdown-item" href="#">{{$item->nom}}</a>
-                       <form class="form-inline my-2 my-lg-0"  method="POST" action="/remove_cart" >
+                       <form class="form-inline my-2 my-lg-0"  method="POST" action="/removefromcart" >
                             {{csrf_field()}}
                              <input class="form-control" type="number"  hidden name="articleid" value={{$item->id}}>
-                            <button class="btn btn-outline-success" type="submit">Vider Le Panier</button>
+                            <button class="btn btn-outline-success" type="submit">retirer l'article</button>
                           </form>
                       @endforeach
+                      <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Passer la commande</a>
                       
                       <div class="dropdown-divider"></div>
                         
@@ -55,8 +57,7 @@
                             
                             <button class="btn btn-outline-success" type="submit">Vider Le Panier</button>
                           </form>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Passer la commande</a>
+                        
                   </div>
       			</li>
     		</ul>

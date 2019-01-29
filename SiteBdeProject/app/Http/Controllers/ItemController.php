@@ -88,6 +88,17 @@ class ItemController extends Controller
     }
 
 
+public function removefromcart(){ //efface un event de la BDD
+    	$this->validate(request(),[
+			'articleid'=>'required',
+
+		]);
+    	
+    	DB::connection('BDDlocal')->delete("call removeFromCart('".request()->articleid."','".auth()->user()->id."');");
+
+    	 return back();
+    }
+
 
 
    }

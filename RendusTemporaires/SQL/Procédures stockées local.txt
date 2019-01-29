@@ -119,6 +119,14 @@ NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
 INSERT INTO commande(`idarticle`,`idutilisateur`) VALUES (IDarticle,IDuser);
 
 
+CREATE PROCEDURE `removeFromCart`(IN `IDarticle` INT(10), IN `IDuser` INT(10)) 
+NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
+DELETE from Commande 
+WHERE `commande`.`idarticle`= IDarticle 
+AND `idutilisateur`= IDuser
+AND `status`= 'panier' ;
+
+
 
 CREATE PROCEDURE `checkInsc`(IN `IDevent` INT(10), IN `IDuser` int(10)) 
 NOT DETERMINISTIC NO SQL SQL SECURITY DEFINER
