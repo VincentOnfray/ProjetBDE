@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../css/shop_content.css" />
 @endsection
 @section('page')
-<section>
+<section id="page">
 	<div>
 		<h1>La boutique </h1>
 		<p>Bienvenue sur la boutique de votre BDE</p>	
