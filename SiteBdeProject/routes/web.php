@@ -32,9 +32,7 @@ Route::get('/ppdp', function () {
 });
 
 //Page de contact
-Route::get('/contact', function () {
-    return view('contact.contact');
-});
+Route::post('/contact', "Mailcontroller@mail");
 
 Route::get('/mailcontact', function () {
     return view('contact.mailcontact');
