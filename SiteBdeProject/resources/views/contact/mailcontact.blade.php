@@ -9,7 +9,7 @@
 @section ('content')
 <h1>Contactez nous !</h1>
 <form id=contact method="POST" action="/contact">
-	
+	<input type="hidden" name="token" value="{{csrf_token()}}">
 	{{csrf_field()}}
 		<div>
           <label for="mail">E-mail:</label> <input type="email" id="mail" name="email">
