@@ -1,20 +1,22 @@
 @extends("boutique.shop")
 
 @section('css+')
-<link rel="stylesheet" href="../css/shop_content.css" />
+
+<link rel="stylesheet" href="../css/shop_display.css" />
 @endsection
 @section('page')
 
 	
 		<div id="boite">
-			<div class="products">
+			<div class="contenue">
          @foreach($shop as $article)
+         <div class="article">
 		         <h4 class="prodName">{{$article->nom}}</h4>
 		         <p class="prodDesc">{{$article->Description}}</p>
 		         <p class="price">prix: {{($article->prix/100)}}€ TTC</p>
-		         
-		         <img class="imgArticle" alt={{$article->nom}} src={{"\\img\\boutique\\".$article->Image}}>
-
+		         <div class="imgDiv">
+		         	<img class="imgArticle" alt={{$article->nom}} src={{"\\img\\boutique\\".$article->Image}}>
+		    	 </div>
 		         @if(auth()->user()->role == "BDE")
 		         <form class="form-inline my-2 my-lg-0"  method="POST" action="/delete_item" >
 		          {{csrf_field()}}
@@ -39,6 +41,7 @@
 		        	<button class="btn chosen" type="submit">dans le panier</button>
 		        }
 		        @endif
+		    </div>
          @endforeach
         </div>
 		</div>

@@ -16,3 +16,10 @@
 	max-height: 400px;
 	max-width: auto;
 }
+
+.texts
+{
+	margin-top: 20px;
+	border: 2px solid black;
+	border-radius: 2%;
+}
