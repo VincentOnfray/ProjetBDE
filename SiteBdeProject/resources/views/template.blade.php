@@ -48,7 +48,7 @@
                     <li><a href="/display_event"><i class="far fa-calendar-alt"></i> EVENEMENTS </a></li>
                     <li><a href="/display_idea"><i class="far fa-lightbulb"></i> BOITE A IDEES </a></li>
                     @if(auth()->user()->role == "CESI")
-                     <li><a href="/download_images"><i class="far"></i>RECUPERER LES IMAGES </a></li>
+                     <li><a href="/download_images"><i class="far"></i>RECUPERER IMAGES</a></li>
                     @endif
                     @endif
                     
