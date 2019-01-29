@@ -3,7 +3,7 @@
 
 <!-- page d'enregistrement d'evenement-->
 @section('css')
-<link rel="stylesheet" type="text/css" href="css/register.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
 @endsection
 
 @section('content')
@@ -12,32 +12,32 @@
 
 
 
-<form id=register method="POST" action="/register">
+<form class='form' method="POST" action="/register">
 	
 	{{csrf_field()}}
 
-	<div class="form group">
+	<div class="group">
 		<label for="name">Prenom:</label>
 		<input type="text" class="form_control" id="name" name="name">
 	</div>
 
-	<div class="form group">
+	<div class="group">
 		<label for="surname">Nom:</label>
 		<input type="text" class="form_control" id="surname" name="surname">
 	</div>
 
-	<div class="form group">
+	<div class="group">
 		<label for="email">Adresse E-Mail:</label>
 		<input type="email" class="form_control" id="email" name="email">
 	</div>
 
-	<div class="form group">
+	<div class="group">
 		<label for="password">Mot de Passe:</label>
 		<input type="password" class="form_control" id="password" name="password">
 	</div>
 
 
-	<div class="form group">
+	<div class="group">
 
 		<label for="role">Role:</label>
 
@@ -56,7 +56,7 @@
 
 
 
-	<div class="form group">
+	<div class="group">
 
 		<label for="centre">Centre:</label>
 
@@ -78,7 +78,7 @@
 		</select>
 
 	</div>
-	<div class="form group check" href="/ppdp">
+	<div class="group check" href="/ppdp">
 			<label for="check" href="/ppdp"><input type="checkbox" name="check" class="check"> J'accepte les conditions d'utilisation du site </label>
 			<a class="btn btn-primary" href="/ppdp" role="button">Politique de protection des données</a>
 
@@ -87,7 +87,7 @@
 			
 	</div>
 
-	<div class="form button">
+	<div class="button">
 
 	
 
