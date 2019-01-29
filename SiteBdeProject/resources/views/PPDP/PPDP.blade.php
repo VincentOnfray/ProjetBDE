@@ -5,6 +5,7 @@
 @endsection
 
 @section ('content')
+<balise id="hautdepage"></balise>
 <section id="poliProtSection">
 <h1>Politique de Protection des Données Personnelles</h1>
 
@@ -161,5 +162,8 @@ Conformément à la réglementation en vigueur les Utilisateurs de notre Site di
 <h2>Nous contacter</h2>
 <p id="end">Si vous avez des questions ou des réclamations ou si vous souhaitez faire part à CESI de recommandations ou des commentaires visant à améliorer notre Politique de protection des données personnelles vous pouvez envoyer un email à l’adresse cil@cesi.fr ou adresser un courrier à l’adresse suivante : CESI – Data Protection Officer – 30 rue Cambronne 75015 Paris France
 </p>
+<div class="arrowup">
+	<a href="#hautdepage"><i class="fas fa-arrow-up"></i></a>
+</div>
 </section>
 @endsection
