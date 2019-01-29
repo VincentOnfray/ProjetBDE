@@ -11,11 +11,8 @@
   
 <section>
 	<div class="container">
-
 		@if(auth()->user()->role == "BDE") 
 		<div class="row">
-	
-
 			<div class="col-4-sm col-2-md">
 	 			<a class="btn btn-primary" href="create_event" role="button">Organiser</a>
 	 		</div>
@@ -25,7 +22,7 @@
 
 	<div class="container">
 		<div class="col-6-md">
-
+			
 		@foreach ($events as $event)  <!-- 2 Pour chaque évenement, on créé une section-->
 				
 

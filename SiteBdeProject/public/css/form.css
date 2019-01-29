@@ -5,7 +5,7 @@ h1 {
 	padding-top: 1%
 }
 
-#register {
+.form {
 	border: 2px solid grey;
 	box-shadow: 6px 6px 6px black;
 	border-radius: 28px;

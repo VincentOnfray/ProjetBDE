@@ -6,6 +6,6 @@
   <body>
     <h2>Prise de contact sur mon beau site</h2>
     <p>Réception d'une prise de contact avec les éléments suivants :</p>
-    <p>ceci é 1 test</p>
+    <p>ceci est un test</p>
   </body>
 </html>

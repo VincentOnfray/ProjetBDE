@@ -12,7 +12,7 @@ class Mailcontroller extends Controller
 
         Mail::send("emails.contact",array(),function($message)
         {
-        	$options['ssl'] = array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true);
+        	
         	$message->to('cesiprojetbde@gmail.com');
         });
  
