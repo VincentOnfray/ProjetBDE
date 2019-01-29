@@ -7,15 +7,16 @@
 
 @section('content')
 	@if(auth()->check())  <!-- 1 -->
-		<div>
-			<a href="create_idea">proposer</a>
+		<a href="create_idea">proposer</a>
+		<div id="content">
 			@foreach ($ideas as $idea)  <!-- 2 Pour chaque idée, on créé une DIV et tous les elements correspondants -->
 				<div class="ideadiv">
-					<h3>{{$idea->titre}}</h3> <br>
-					<p>{{$idea->description}}</p><br>
-					<p>Supports: {{$idea->likes}}</p><br>
-					<img src={{$idea->IDImage}} alt="illustration" class="illustration">
-
+					<div class="card">
+						<h3>{{$idea->titre}}</h3> <br>
+						<p>{{$idea->description}}</p><br>
+						<p>Supports: {{$idea->likes}}</p><br>
+						<img src={{$idea->IDImage}} alt="illustration" class="illustration">
+					</div>
 
 					@if(auth()->user()->role == "BDE") <!-- 3 -->
 						<form enctype="multipart/form-data" method="POST" action="/delete_idea">
