@@ -16,7 +16,10 @@ class ItemController extends Controller
 			return redirect()->to('home');
 		}
 
-		return view('boutique.create');
+
+		 $cart = DB::connection('BDDlocal')->select("call getCart('".auth()->user()->id."');");
+
+		return view('boutique.create')->withCart($cart);
 
 
 	}
