@@ -76,3 +76,9 @@ h2{
 #poliProtSection {
 background-color: #EFEFEF;
 }
+
+.arrowup{
+	width: 30px;
+	position: absolute;
+	right: 0;
+}

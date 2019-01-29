@@ -5,9 +5,12 @@
 @endsection
 
 @section ('content')
-
+<balise id="hautdepage"></balise>
 <section id="cgvSection">
+
 <h1>Conditions générales de vente </h1>
+
+
 
 <p class='para'>Ces CGV sont accessibles à tout moment sur le site htpp://www.cesi.bde.com et prévaudront sur toute autre document. </p>
 <p class='para'>Le Client déclare avoir pris connaissance des présentes CGV et les avoir acceptées lors de son inscritpion au site http://www.cesi.bde.com</p>
@@ -82,5 +85,8 @@ bancaire est réalisé par notre prestataire de paiement. Les informations trans
 
 <p class="italique">"Nos conditions générales de vente ont été élaborées à partir d'un modèle libre et gratuit qui peut être téléchargé sur le site https://www.donneespersonnelles.fr/" 
 </p>
+<div class="arrowup">
+	<a href="#hautdepage"><i class="fas fa-arrow-up"></i></a>
+</div>
 </section>
 @endsection
