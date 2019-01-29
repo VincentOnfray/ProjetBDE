@@ -79,6 +79,15 @@ class ItemController extends Controller
     }
 
 
+    public function emptyCart(){ //efface un event de la BDD
+    	
+    	
+    	DB::connection('BDDlocal')->delete("call emptyCart('".auth()->user()->id."');");
+
+    	 return back();
+    }
+
+
 
 
    }

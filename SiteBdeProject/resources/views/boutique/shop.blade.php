@@ -30,16 +30,33 @@
 	          					<a class="dropdown-item" href="/shop/goodies">Goodies</a>
 	          					<a class="dropdown-item" href="/shop/vetement">Vetements</a>
                       <a class="dropdown-item" href="/shop/autres">Autres</a>
+                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="/shop_all">Toutes catégories</a>
 	        				</div>
 	      		</li>
 	      		<li class="nav-item   dropdown">
-        			<a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Panier</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Les plus vendues</a>
-                      
+                    
+                      @foreach($cart as $item)
+                      <a class="dropdown-item" href="#">{{$item->nom}}</a>
+                       <form class="form-inline my-2 my-lg-0"  method="POST" action="/remove_cart" >
+                            {{csrf_field()}}
+                             <input class="form-control" type="number"  hidden name="articleid" value={{$item->id}}>
+                            <button class="btn btn-outline-success" type="submit">Vider Le Panier</button>
+                          </form>
+                      @endforeach
                       
                       <div class="dropdown-divider"></div>
+                        
+
+                         <form class="form-inline my-2 my-lg-0"  method="POST" action="/empty_cart" >
+                            {{csrf_field()}}
+                            
+                            <button class="btn btn-outline-success" type="submit">Vider Le Panier</button>
+                          </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Passer la commande</a>
                   </div>
       			</li>
     		</ul>
